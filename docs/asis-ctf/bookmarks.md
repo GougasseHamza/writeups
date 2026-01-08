@@ -5,7 +5,7 @@
 
 ## The Challenge
 
-Bookmarks was a Flask application for managing bookmarks. Users could register, login, and save bookmarks to their dashboard. The interesting part was that it had a bot - when you reported a URL, a headless browser would visit it, register as a user with the flag as the username, log in, and browse around.
+Bookmarks was a Flask application for managing bookmarks. Users could register, login, and save bookmarks to their dashboard. The interesting part was that it had a bot , when you reported a URL, a headless browser would visit it, register as a user with the flag as the username, log in, and browse around.
 
 My goal was to steal that username (the flag) from the bot's session.
 
@@ -173,17 +173,7 @@ After a few seconds, I saw the callback with the flag:
 [>] FLAG:FLAG{...}
 ```
 
-## What I Learned
-
-This challenge taught me several things about web security:
-
-**CRLF Injection is Powerful:** By injecting `\r\n\r\n` into HTTP headers, I could push security headers like CSP into the response body where they have no effect. This completely bypassed the Content Security Policy.
-
-**HTTP Response Splitting:** CRLF injection can split the HTTP response, allowing injection of arbitrary headers and body content. Modern frameworks usually protect against this, but when user input flows directly into header values, it can still be exploited.
-
-**Shared Cookies Across Windows:** Popup windows opened with `window.open()` share the same cookie jar as their opener if they're on the same origin. Even though I couldn't access `window.opener.document` after navigation, I could still make authenticated requests using `fetch()`.
-
-**Timing Attacks:** Client-side exploitation often requires precise timing. I had to wait for the bot to complete its registration and login before my injected script could fetch the dashboard. Multiple timed attempts (8s, 10s, 12s) helped ensure success.
+## takeaways
 
 **Defense:** The vulnerability existed because:
 1. User input (username) was directly concatenated into HTTP header names
@@ -195,4 +185,3 @@ The fix would be to either:
 - Use a safe templating method for headers
 - Validate usernames to reject control characters
 
-This was probably the toughest challenge in the set, requiring understanding of HTTP response structure, browser security models, and careful timing coordination.

@@ -167,28 +167,3 @@ if __name__ == "__main__":
     main()
 ```
 
-## What I Learned
-
-This challenge was all about recognizing how vulnerabilities can be chained together. Individually, each vulnerability was limited:
-
-- The SSRF could only fetch internal services that I already knew about
-- The path traversal needed the bucket check to be bypassed
-- The IDOR just let me read other users' emails
-
-But together, they formed a complete attack chain. I used IDOR to discover the flag filename, path traversal to access the protected FLAG directory, and SSRF to make the internal request that bypassed the nginx restrictions.
-
-The challenge also highlighted the importance of defense in depth. The bucket check was trying to protect the FLAG directory, but it only checked one part of the path. A better approach would have been:
-
-1. Normalize and resolve the full path before checking
-2. Ensure the final resolved path stays within the allowed directory
-3. Apply the same security checks at every layer (the hash endpoint was missing the FLAG check)
-
-Microservices architecture introduces complexity, and with complexity comes opportunities for security gaps between service boundaries. Each service was somewhat secure on its own, but the interactions between them created vulnerabilities.
-
-| Vulnerability | Impact | Used For |
-|--------------|--------|----------|
-| SSRF | Internal service access | Fetch the flag file |
-| Path Traversal | Directory escape | Access FLAG bucket |
-| IDOR | Information disclosure | Find flag filename |
-
-The IDOR vulnerability turned out to be critical - without it, I would have had to brute-force or guess the MD5 hash in the filename, which would have been practically impossible.

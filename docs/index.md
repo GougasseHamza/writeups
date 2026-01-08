@@ -1,88 +1,76 @@
 # CTF Writeups
 
-Welcome to my collection of Capture The Flag (CTF) challenge writeups! This site contains detailed solutions, exploit code, and security lessons learned from various CTF competitions.
+I've been documenting my journey through various Capture The Flag competitions, and this site is where I share what I've learned. Each writeup here represents hours of poking at web applications, reading source code, and sometimes just staring at my screen until something clicks.
 
-## 🎯 What You'll Find Here
+## What I Share
 
-Each writeup includes:
+When I write about a challenge, I try to capture the whole experience - not just the solution, but the thought process behind it. You'll find detailed vulnerability analysis, the exact steps I took to exploit each flaw, working code that you can actually run, and the security lessons I picked up along the way.
 
-- **Detailed vulnerability analysis** - Understanding the security flaws
-- **Step-by-step exploitation** - How to exploit the vulnerabilities
-- **Working exploit code** - Complete, tested exploit scripts
-- **Key takeaways** - Security lessons and defensive measures
-
-## 📚 Latest Writeups
+## Recent Challenges
 
 ### ASIS CTF
 
-Four web exploitation challenges featuring advanced techniques:
+I recently tackled four web exploitation challenges from ASIS CTF. Each one taught me something new about breaking (and hopefully, securing) web applications.
 
 <div class="grid cards" markdown>
 
--   :material-chess-knight:{ .lg .middle } **Sanchess**
+-   **Sanchess**
 
     ---
 
-    Python expression injection with Unicode normalization bypass
+    A Rick and Morty themed chess game that turned into a lesson about Python expression injection. After the challenge got patched, I had to learn about Unicode normalization bypasses to solve it again.
 
-    [:octicons-arrow-right-24: Read more](asis-ctf/sanchess.md)
+    [Read the full story](asis-ctf/sanchess.md)
 
--   :material-image:{ .lg .middle } **Rick Gallery**
-
-    ---
-
-    PHP LFI through case-sensitive filter bypass
-
-    [:octicons-arrow-right-24: Read more](asis-ctf/rick-gallery.md)
-
--   :material-email:{ .lg .middle } **ASIS Mail**
+-   **Rick Gallery**
 
     ---
 
-    SSRF + Path Traversal + IDOR vulnerability chain
+    Started as a simple image gallery but ended up teaching me about case-sensitive filter bypasses in PHP. Sometimes the simplest vulnerabilities are the easiest to miss.
 
-    [:octicons-arrow-right-24: Read more](asis-ctf/asis-mail.md)
+    [Read the full story](asis-ctf/rick-gallery.md)
 
--   :material-bookmark:{ .lg .middle } **Bookmarks**
+-   **ASIS Mail**
 
     ---
 
-    CRLF injection leading to CSP bypass and XSS
+    A microservices-based email app that had more vulnerabilities than I initially expected. I chained together SSRF, path traversal, and IDOR to finally extract the flag.
 
-    [:octicons-arrow-right-24: Read more](asis-ctf/bookmarks.md)
+    [Read the full story](asis-ctf/asis-mail.md)
+
+-   **Bookmarks**
+
+    ---
+
+    This one was tough. A Flask app that taught me how CRLF injection can completely bypass Content Security Policy. The timing had to be perfect to steal the admin's session.
+
+    [Read the full story](asis-ctf/bookmarks.md)
 
 </div>
 
-## 🛠️ Techniques Covered
+## Techniques I've Explored
 
-The writeups on this site cover a wide range of exploitation techniques:
+Through these challenges, I've worked with various exploitation techniques. Here's a quick overview:
 
-| Technique | Description | Challenges |
-|-----------|-------------|------------|
-| **SSRF** | Server-Side Request Forgery | ASIS Mail |
-| **LFI** | Local File Inclusion | Rick Gallery |
-| **Path Traversal** | Directory traversal attacks | ASIS Mail |
-| **IDOR** | Insecure Direct Object Reference | ASIS Mail |
+| Technique | What I Learned | Challenge |
+|-----------|----------------|-----------|
+| **SSRF** | Making servers request themselves | ASIS Mail |
+| **LFI** | Reading files I shouldn't have access to | Rick Gallery |
+| **Path Traversal** | Escaping directory restrictions | ASIS Mail |
+| **IDOR** | Accessing other users' data | ASIS Mail |
 | **Python Sandbox Escape** | Breaking out of restricted Python environments | Sanchess |
-| **Unicode Normalization Bypass** | Filter evasion using Unicode characters | Sanchess |
-| **CRLF Injection** | HTTP header injection attacks | Bookmarks |
-| **CSP Bypass** | Content Security Policy evasion | Bookmarks |
-| **XSS** | Cross-Site Scripting | Bookmarks |
+| **Unicode Normalization** | Using fullwidth characters to bypass filters | Sanchess |
+| **CRLF Injection** | Injecting newlines into HTTP headers | Bookmarks |
+| **CSP Bypass** | Circumventing Content Security Policies | Bookmarks |
 
-## 🎓 Learning Resources
+## How I Write These
 
-Each writeup is structured to be educational and includes:
+I structure each writeup to be useful for learning. I explain the vulnerability type, show where you might see it in real applications, and discuss how to defend against it. I also include working exploit code because I believe seeing something work is the best way to understand it.
 
-- Background on the vulnerability type
-- Common real-world occurrences
-- Detection methods
-- Remediation strategies
-- Links to additional resources
+## Contributing
 
-## 📬 Contributing
-
-Found a mistake or have suggestions? Feel free to open an issue or submit a pull request on [GitHub](https://github.com/GougasseHamza/writeups).
+If you spot a mistake or have suggestions for improvement, I'd appreciate it if you opened an issue or pull request on [GitHub](https://github.com/GougasseHamza/writeups). I'm always learning and welcome corrections.
 
 ---
 
-*Happy hacking! Remember: Only perform security testing on systems you own or have explicit permission to test.*
+*Remember: These techniques are for authorized testing only. Never attack systems you don't own or have explicit permission to test.*

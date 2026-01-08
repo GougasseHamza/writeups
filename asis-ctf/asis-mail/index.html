@@ -637,17 +637,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#what-i-learned" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What I Learned
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -805,17 +794,6 @@
     <span class="md-ellipsis">
       
         The Exploit
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-i-learned" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What I Learned
       
     </span>
   </a>
@@ -986,48 +964,6 @@
 </span><span id="__span-6-59"><a id="__codelineno-6-59" name="__codelineno-6-59" href="#__codelineno-6-59"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
 </span><span id="__span-6-60"><a id="__codelineno-6-60" name="__codelineno-6-60" href="#__codelineno-6-60"></a>    <span class="n">main</span><span class="p">()</span>
 </span></code></pre></div>
-<h2 id="what-i-learned">What I Learned<a class="headerlink" href="#what-i-learned" title="Permanent link">&para;</a></h2>
-<p>This challenge was all about recognizing how vulnerabilities can be chained together. Individually, each vulnerability was limited:</p>
-<ul>
-<li>The SSRF could only fetch internal services that I already knew about</li>
-<li>The path traversal needed the bucket check to be bypassed</li>
-<li>The IDOR just let me read other users' emails</li>
-</ul>
-<p>But together, they formed a complete attack chain. I used IDOR to discover the flag filename, path traversal to access the protected FLAG directory, and SSRF to make the internal request that bypassed the nginx restrictions.</p>
-<p>The challenge also highlighted the importance of defense in depth. The bucket check was trying to protect the FLAG directory, but it only checked one part of the path. A better approach would have been:</p>
-<ol>
-<li>Normalize and resolve the full path before checking</li>
-<li>Ensure the final resolved path stays within the allowed directory</li>
-<li>Apply the same security checks at every layer (the hash endpoint was missing the FLAG check)</li>
-</ol>
-<p>Microservices architecture introduces complexity, and with complexity comes opportunities for security gaps between service boundaries. Each service was somewhat secure on its own, but the interactions between them created vulnerabilities.</p>
-<table>
-<thead>
-<tr>
-<th>Vulnerability</th>
-<th>Impact</th>
-<th>Used For</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>SSRF</td>
-<td>Internal service access</td>
-<td>Fetch the flag file</td>
-</tr>
-<tr>
-<td>Path Traversal</td>
-<td>Directory escape</td>
-<td>Access FLAG bucket</td>
-</tr>
-<tr>
-<td>IDOR</td>
-<td>Information disclosure</td>
-<td>Find flag filename</td>
-</tr>
-</tbody>
-</table>
-<p>The IDOR vulnerability turned out to be critical - without it, I would have had to brute-force or guess the MD5 hash in the filename, which would have been practically impossible.</p>
 
 
 

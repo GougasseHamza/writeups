@@ -599,17 +599,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-i-learned" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What I Learned
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -801,17 +790,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-i-learned" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What I Learned
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -971,13 +949,6 @@
 </span><span id="__span-4-51"><a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
 </span><span id="__span-4-52"><a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>    <span class="n">main</span><span class="p">()</span>
 </span></code></pre></div>
-<h2 id="what-i-learned">What I Learned<a class="headerlink" href="#what-i-learned" title="Permanent link">&para;</a></h2>
-<p>This challenge reinforced a few important lessons:</p>
-<p><strong>Case Sensitivity Matters:</strong> Security filters need to handle case variations. In PHP's case, stream wrappers like <code>php://</code>, <code>file://</code>, and <code>data://</code> are case-insensitive, so <code>PHP://</code>, <code>FILE://</code>, and <code>DATA://</code> work identically. A proper filter would convert input to lowercase before checking, or use case-insensitive string matching.</p>
-<p><strong>file_get_contents() is Dangerous:</strong> When user input flows into <code>file_get_contents()</code> without proper validation, it creates a local file inclusion vulnerability. The function accepts both regular file paths and PHP stream wrappers, making it especially risky.</p>
-<p><strong>Don't Overlook Simple Paths:</strong> I spent time trying complicated paths and wrappers when the flag was just sitting in <code>/tmp/flag.txt</code>. In CTFs, flags are often in obvious locations like <code>/tmp/</code>, <code>/flag.txt</code>, or the application's home directory.</p>
-<p><strong>Error-Based Detection:</strong> By checking if the response contained PHP error messages like <code>&lt;br /&gt;</code> or <code>Warning</code>, I could determine whether a file existed or not. This is useful for blind enumeration when you don't get the file contents directly.</p>
-<p>Sometimes the simplest vulnerabilities are the most effective. A single character difference (lowercase vs uppercase) was all it took to bypass the security filter.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.php.net/manual/en/wrappers.php">PHP Stream Wrappers Documentation</a></li>

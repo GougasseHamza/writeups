@@ -666,10 +666,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-i-learned" class="md-nav__link">
+  <a href="#takeaways" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What I Learned
+        takeaways
       
     </span>
   </a>
@@ -812,10 +812,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-i-learned" class="md-nav__link">
+  <a href="#takeaways" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What I Learned
+        takeaways
       
     </span>
   </a>
@@ -859,7 +859,7 @@
 <p><strong>Category:</strong> Web Exploitation
 <strong>Flag:</strong> <code>FLAG{...}</code></p>
 <h2 id="the-challenge">The Challenge<a class="headerlink" href="#the-challenge" title="Permanent link">&para;</a></h2>
-<p>Bookmarks was a Flask application for managing bookmarks. Users could register, login, and save bookmarks to their dashboard. The interesting part was that it had a bot - when you reported a URL, a headless browser would visit it, register as a user with the flag as the username, log in, and browse around.</p>
+<p>Bookmarks was a Flask application for managing bookmarks. Users could register, login, and save bookmarks to their dashboard. The interesting part was that it had a bot , when you reported a URL, a headless browser would visit it, register as a user with the flag as the username, log in, and browse around.</p>
 <p>My goal was to steal that username (the flag) from the bot's session.</p>
 <h2 id="the-bots-behavior">The Bot's Behavior<a class="headerlink" href="#the-bots-behavior" title="Permanent link">&para;</a></h2>
 <p>Looking at the bot code, I could see the sequence:</p>
@@ -996,12 +996,7 @@
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>[&gt;] Fetching dashboard
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>[&gt;] FLAG:FLAG{...}
 </span></code></pre></div>
-<h2 id="what-i-learned">What I Learned<a class="headerlink" href="#what-i-learned" title="Permanent link">&para;</a></h2>
-<p>This challenge taught me several things about web security:</p>
-<p><strong>CRLF Injection is Powerful:</strong> By injecting <code>\r\n\r\n</code> into HTTP headers, I could push security headers like CSP into the response body where they have no effect. This completely bypassed the Content Security Policy.</p>
-<p><strong>HTTP Response Splitting:</strong> CRLF injection can split the HTTP response, allowing injection of arbitrary headers and body content. Modern frameworks usually protect against this, but when user input flows directly into header values, it can still be exploited.</p>
-<p><strong>Shared Cookies Across Windows:</strong> Popup windows opened with <code>window.open()</code> share the same cookie jar as their opener if they're on the same origin. Even though I couldn't access <code>window.opener.document</code> after navigation, I could still make authenticated requests using <code>fetch()</code>.</p>
-<p><strong>Timing Attacks:</strong> Client-side exploitation often requires precise timing. I had to wait for the bot to complete its registration and login before my injected script could fetch the dashboard. Multiple timed attempts (8s, 10s, 12s) helped ensure success.</p>
+<h2 id="takeaways">takeaways<a class="headerlink" href="#takeaways" title="Permanent link">&para;</a></h2>
 <p><strong>Defense:</strong> The vulnerability existed because:
 1. User input (username) was directly concatenated into HTTP header names
 2. No validation for special characters like <code>\r</code> and <code>\n</code>
@@ -1010,7 +1005,6 @@
 - Sanitize all user input that goes into headers
 - Use a safe templating method for headers
 - Validate usernames to reject control characters</p>
-<p>This was probably the toughest challenge in the set, requiring understanding of HTTP response structure, browser security models, and careful timing coordination.</p>
 
 
 

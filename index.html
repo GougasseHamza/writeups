@@ -402,17 +402,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-i-share" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What I Share
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#recent-challenges" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -437,39 +426,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#techniques-ive-explored" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Techniques I've Explored
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-i-write-these" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How I Write These
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contributing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Contributing
-      
-    </span>
-  </a>
   
 </li>
       
@@ -736,17 +692,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-i-share" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What I Share
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#recent-challenges" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -771,39 +716,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#techniques-ive-explored" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Techniques I've Explored
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-i-write-these" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How I Write These
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contributing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Contributing
-      
-    </span>
-  </a>
   
 </li>
       
@@ -841,9 +753,7 @@
 
 
 <h1 id="ctf-writeups">CTF Writeups<a class="headerlink" href="#ctf-writeups" title="Permanent link">&para;</a></h1>
-<p>I've been documenting my journey through various Capture The Flag competitions, and this site is where I share what I've learned. Each writeup here represents hours of poking at web applications, reading source code, and sometimes just staring at my screen until something clicks.</p>
-<h2 id="what-i-share">What I Share<a class="headerlink" href="#what-i-share" title="Permanent link">&para;</a></h2>
-<p>When I write about a challenge, I try to capture the whole experience - not just the solution, but the thought process behind it. You'll find detailed vulnerability analysis, the exact steps I took to exploit each flaw, working code that you can actually run, and the security lessons I picked up along the way.</p>
+<p>Personal blog to keep track of the past CTF challs  ( web + some crypto / OSINT) and to share with everyone.</p>
 <h2 id="recent-challenges">Recent Challenges<a class="headerlink" href="#recent-challenges" title="Permanent link">&para;</a></h2>
 <h3 id="asis-ctf">ASIS CTF<a class="headerlink" href="#asis-ctf" title="Permanent link">&para;</a></h3>
 <p>I recently tackled four web exploitation challenges from ASIS CTF. Each one taught me something new about breaking (and hopefully, securing) web applications.</p>
@@ -852,88 +762,23 @@
 <li>
 <p><strong>Sanchess</strong></p>
 <hr />
-<p>A Rick and Morty themed chess game that turned into a lesson about Python expression injection. After the challenge got patched, I had to learn about Unicode normalization bypasses to solve it again.</p>
-<p><a href="asis-ctf/sanchess/">Read the full story</a></p>
-</li>
-<li>
-<p><strong>Rick Gallery</strong></p>
+<p><a href="asis-ctf/sanchess/">Writeup</a>
+-   <strong>Rick Gallery</strong></p>
 <hr />
-<p>Started as a simple image gallery but ended up teaching me about case-sensitive filter bypasses in PHP. Sometimes the simplest vulnerabilities are the easiest to miss.</p>
-<p><a href="asis-ctf/rick-gallery/">Read the full story</a></p>
+<p><a href="asis-ctf/rick-gallery/">Writeup</a></p>
 </li>
 <li>
 <p><strong>ASIS Mail</strong></p>
 <hr />
-<p>A microservices-based email app that had more vulnerabilities than I initially expected. I chained together SSRF, path traversal, and IDOR to finally extract the flag.</p>
-<p><a href="asis-ctf/asis-mail/">Read the full story</a></p>
+<p><a href="asis-ctf/asis-mail/">Writeup</a></p>
 </li>
 <li>
 <p><strong>Bookmarks</strong></p>
 <hr />
-<p>This one was tough. A Flask app that taught me how CRLF injection can completely bypass Content Security Policy. The timing had to be perfect to steal the admin's session.</p>
-<p><a href="asis-ctf/bookmarks/">Read the full story</a></p>
+<p><a href="asis-ctf/bookmarks/">Writeup</a></p>
 </li>
 </ul>
 </div>
-<h2 id="techniques-ive-explored">Techniques I've Explored<a class="headerlink" href="#techniques-ive-explored" title="Permanent link">&para;</a></h2>
-<p>Through these challenges, I've worked with various exploitation techniques. Here's a quick overview:</p>
-<table>
-<thead>
-<tr>
-<th>Technique</th>
-<th>What I Learned</th>
-<th>Challenge</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>SSRF</strong></td>
-<td>Making servers request themselves</td>
-<td>ASIS Mail</td>
-</tr>
-<tr>
-<td><strong>LFI</strong></td>
-<td>Reading files I shouldn't have access to</td>
-<td>Rick Gallery</td>
-</tr>
-<tr>
-<td><strong>Path Traversal</strong></td>
-<td>Escaping directory restrictions</td>
-<td>ASIS Mail</td>
-</tr>
-<tr>
-<td><strong>IDOR</strong></td>
-<td>Accessing other users' data</td>
-<td>ASIS Mail</td>
-</tr>
-<tr>
-<td><strong>Python Sandbox Escape</strong></td>
-<td>Breaking out of restricted Python environments</td>
-<td>Sanchess</td>
-</tr>
-<tr>
-<td><strong>Unicode Normalization</strong></td>
-<td>Using fullwidth characters to bypass filters</td>
-<td>Sanchess</td>
-</tr>
-<tr>
-<td><strong>CRLF Injection</strong></td>
-<td>Injecting newlines into HTTP headers</td>
-<td>Bookmarks</td>
-</tr>
-<tr>
-<td><strong>CSP Bypass</strong></td>
-<td>Circumventing Content Security Policies</td>
-<td>Bookmarks</td>
-</tr>
-</tbody>
-</table>
-<h2 id="how-i-write-these">How I Write These<a class="headerlink" href="#how-i-write-these" title="Permanent link">&para;</a></h2>
-<p>I structure each writeup to be useful for learning. I explain the vulnerability type, show where you might see it in real applications, and discuss how to defend against it. I also include working exploit code because I believe seeing something work is the best way to understand it.</p>
-<h2 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">&para;</a></h2>
-<p>If you spot a mistake or have suggestions for improvement, I'd appreciate it if you opened an issue or pull request on <a href="https://github.com/GougasseHamza/writeups">GitHub</a>. I'm always learning and welcome corrections.</p>
-<hr />
-<p><em>Remember: These techniques are for authorized testing only. Never attack systems you don't own or have explicit permission to test.</em></p>
 
 
 

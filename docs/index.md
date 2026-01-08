@@ -16,6 +16,7 @@ I recently tackled four web exploitation challenges from ASIS CTF. Each one taug
     ---
 
     [Writeup](asis-ctf/sanchess.md)
+    
 -   **Rick Gallery**
 
     ---
@@ -31,7 +32,7 @@ I recently tackled four web exploitation challenges from ASIS CTF. Each one taug
 -   **Bookmarks**
 
     ---
-    
+
     [Writeup](asis-ctf/bookmarks.md)
 
 </div>

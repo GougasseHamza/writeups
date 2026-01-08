@@ -1,59 +1,42 @@
 # About
 
-## About This Site
+## Why I Write These
 
-This site is a collection of CTF (Capture The Flag) writeups documenting my journey through various cybersecurity challenges. Each writeup aims to be educational, providing not just solutions but also explanations of the underlying security concepts and techniques.
+I started documenting CTF challenges because I kept forgetting the techniques I'd learned. After solving a challenge, I'd move on to the next one, and a few weeks later, I'd face a similar problem and have to figure it out all over again. Writing forces me to really understand what I did and why it worked.
 
-## About Me
+But it's become more than just personal notes. I've learned so much from other people's writeups over the years - those moments when someone explains a technique in a way that just clicks. If my writeups can do that for someone else, then the time spent writing them is worth it.
 
-I'm a security enthusiast passionate about:
+## How I Approach Security
 
-- Web application security
-- Penetration testing
-- Vulnerability research
-- CTF competitions
+I'm interested in web application security, penetration testing, and vulnerability research. CTF competitions give me a safe, legal way to explore these topics without crossing ethical lines. There's something satisfying about that moment when you finally understand how a system can be broken - and more importantly, how it could have been built securely in the first place.
 
-## Why CTF Writeups?
+## My Writing Process
 
-Writing detailed writeups serves multiple purposes:
+When I write a writeup, I try to capture my actual thought process. Not the clean, perfect solution I came up with after the fact, but the messy reality of trying things that don't work, getting stuck, and eventually finding the path forward.
 
-1. **Learning Reinforcement** - Writing about a technique helps solidify understanding
-2. **Knowledge Sharing** - Helping others learn from my solutions
-3. **Documentation** - Creating a reference for future challenges
-4. **Community Contribution** - Giving back to the security community
+I include all the code that actually worked - tested and functional. If I spent three hours debugging an exploit, I'll mention the common pitfalls so you don't have to waste that time too. And I only publish writeups after the CTF ends, out of respect for other competitors.
 
-## Writeup Philosophy
+## What You'll Find Here
 
-My writeups follow these principles:
+Right now, the site focuses on web exploitation challenges. I've written about SSRF, XSS, CRLF injection, local file inclusion, path traversal, CSP bypasses, IDOR vulnerabilities, Python sandbox escapes, expression injection, and various filter evasion techniques.
 
-- **Detailed but Clear** - Enough detail to understand without overwhelming
-- **Working Code** - All exploit code is tested and functional
-- **Educational Focus** - Emphasis on learning, not just solving
-- **Responsible Disclosure** - Only publishing after CTF end dates
+Each challenge taught me something specific, but the real learning comes from seeing patterns across multiple challenges. How the same vulnerability manifests in different contexts. How defensive techniques that work in one scenario fail in another.
 
-## Topics Covered
+## The Site Itself
 
-This site currently features writeups on:
+I built this site with MkDocs Material because I wanted something that was easy to maintain and looked professional without requiring a lot of fiddling. If you want to add your own writeups or suggest improvements, check out the Contributing Guide on GitHub.
 
-- Web Exploitation (SSRF, XSS, CRLF Injection, LFI, Path Traversal)
-- Application Security (CSP Bypass, IDOR, Authentication Bypass)
-- Python Security (Sandbox Escapes, Expression Injection)
-- Filter Evasion (Unicode Normalization, Case Sensitivity)
+## Get in Touch
 
-## Adding New Writeups
+You can find me on GitHub at [GougasseHamza](https://github.com/GougasseHamza). If you spot mistakes in my writeups or have suggestions, please open an issue. I'm still learning, and corrections help me improve.
 
-This site is built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) and is easy to extend. See the [Contributing Guide](https://github.com/GougasseHamza/writeups) for details on adding new writeups.
+## Legal Disclaimer
 
-## Contact & Social
+Everything on this site is for educational purposes. The techniques I document are powerful and could cause real harm if misused. Only use them on systems you own or have explicit written permission to test.
 
-- **GitHub:** [GougasseHamza](https://github.com/GougasseHamza)
-- **Issues/Suggestions:** [GitHub Issues](https://github.com/GougasseHamza/writeups/issues)
+The challenges I write about are from CTF competitions - controlled environments specifically designed for security research. They exist so people like me can learn offensive security skills without breaking the law or hurting anyone.
 
-## Disclaimer
-
-All techniques and exploits documented on this site are for **educational purposes only**. Always obtain proper authorization before performing any security testing. Unauthorized access to computer systems is illegal.
-
-The writeups on this site are based on CTF challenges - controlled, legal environments specifically designed for security research and learning.
+If you're learning from these writeups, please use that knowledge responsibly. The goal is to make systems more secure, not to break things for the sake of breaking them.
 
 ---
 

@@ -1,98 +1,70 @@
 # ASIS CTF
 
-ASIS CTF is a renowned international cybersecurity competition organized by the ASIS (Academy for Skills and Information Security) team. Known for challenging and creative problems, ASIS CTF attracts top security researchers and enthusiasts from around the world.
+ASIS CTF is one of those competitions that makes you think differently about security. Run by the Academy for Skills and Information Security team, it's known for creative challenges that go beyond the typical "find the SQL injection" problems. When I decided to tackle some of their web challenges, I knew I was in for a learning experience.
 
-## Competition Overview
+## What I Worked On
 
-ASIS CTF features various categories including:
+I focused on the web exploitation category, where I found four challenges that each taught me something different about breaking web applications. Some were straightforward, others had me stuck for hours. But that's exactly what makes these competitions valuable - they force you to dig deeper.
 
-- Web Exploitation
-- Cryptography
-- Reverse Engineering
-- Forensics
-- Network Security
-
-## Challenges Solved
-
-Below are the writeups for challenges I solved from ASIS CTF:
-
-### Web Exploitation
+### The Challenges
 
 #### [Sanchess](sanchess.md)
-**Difficulty:** Medium-Hard
-**Flag:** `ASIS{y0u_M2D3_r!cK_@NGRY}`
 
-A Rick and Morty themed chess-like game with a Python expression injection vulnerability. Features two exploitation methods:
-- Pre-patch: FileLoader class exploitation
-- Post-patch: Unicode normalization bypass
+This was a Rick and Morty themed chess game that looked innocent at first. You could program Rick's moves to reach Morty on a chess board. I quickly discovered it was vulnerable to Python expression injection - I could make the server evaluate arbitrary Python code through the move conditions.
 
-**Key Techniques:**
-- Python sandbox escape via class hierarchy
-- Boolean-based blind data extraction
-- Unicode fullwidth character filter bypass
+The interesting part came when the challenge got patched mid-competition. The organizers added filters to block keywords like "open" and "read". I had to learn about Unicode normalization bypasses, using fullwidth characters that look different but evaluate the same way. It was my first time exploiting Unicode normalization, and it completely changed how I think about filter evasion.
+
+[Read the full writeup](sanchess.md)
 
 ---
 
 #### [Rick Gallery](rick-gallery.md)
-**Difficulty:** Easy-Medium
-**Flag:** `ASIS{...}`
 
-A PHP image gallery application with case-sensitive filtering flaws leading to Local File Inclusion.
+An image gallery application that seemed simple enough. It had filters to prevent accessing dangerous PHP wrappers like `php://` and `file://`. The vulnerability? The filters only checked for lowercase versions of these wrappers.
 
-**Key Techniques:**
-- Case-insensitive PHP stream wrapper exploitation
-- Filter bypass through case manipulation
-- Systematic file enumeration
+PHP's stream wrappers are case-insensitive, so `PHP://` and `FILE://` worked perfectly while bypassing all the filters. Sometimes the most effective exploits are the simplest ones. I used this to read arbitrary files on the system and eventually found the flag in `/tmp/flag.txt`.
+
+[Read the full writeup](rick-gallery.md)
 
 ---
 
 #### [ASIS Mail](asis-mail.md)
-**Difficulty:** Medium
-**Flag:** `ASIS{M4IL_4S_4_S3RVIC3_15UUUUUUE5_62ee9c3cc5029d4c}`
 
-A microservice-based email application with multiple chained vulnerabilities.
+This was a microservices-based email application with an API, SSO service, object storage, and nginx frontend. The attack surface was large, and I had to chain multiple vulnerabilities to reach the flag.
 
-**Key Techniques:**
-- Server-Side Request Forgery (SSRF)
-- Path traversal in object storage
-- Insecure Direct Object Reference (IDOR)
-- Information disclosure through other users' attempts
+First, I found SSRF in the email composition endpoint. Then I discovered path traversal in the object storage service - it checked if the bucket name was "FLAG" but didn't sanitize the path itself. By using my own bucket with `../` to traverse to the FLAG directory, I could read protected files.
+
+The clever part was discovering the flag filename by exploiting an IDOR vulnerability to read other users' emails. I could see what filenames other competitors had tried, which led me to the correct flag filename.
+
+[Read the full writeup](asis-mail.md)
 
 ---
 
 #### [Bookmarks](bookmarks.md)
-**Difficulty:** Hard
-**Flag:** `FLAG{...}`
 
-A Flask bookmark manager with CRLF injection leading to complete CSP bypass.
+This was the hardest one. A Flask bookmark manager that inserted the username directly into HTTP response headers. If the username contained CRLF characters (`\r\n`), I could inject my own headers and even inject content into the response body.
 
-**Key Techniques:**
-- CRLF injection in HTTP headers
-- HTTP response splitting
-- Content Security Policy (CSP) bypass
-- XSS via injected JavaScript
-- Session cookie exploitation across windows
+The breakthrough came when I realized I could push the Content-Security-Policy header into the response body by ending the headers early with `\r\n\r\n`. This meant CSP wasn't enforced, and I could execute arbitrary JavaScript.
+
+The timing was tricky - I had to open a popup window that would load my injected script, wait for the bot to log in as the flag user, then use `fetch()` to read the dashboard using the shared session cookie. It took several attempts to get the timing right.
+
+[Read the full writeup](bookmarks.md)
 
 ---
 
-## Summary Statistics
+## What I Learned
 
-| Metric | Value |
-|--------|-------|
-| Challenges Solved | 4 |
-| Category | Web Exploitation |
-| Difficulty Range | Easy → Hard |
-| Techniques Covered | 10+ |
+These four challenges taught me more than just individual techniques. I learned how to think about chaining vulnerabilities, how simple bypasses can defeat complex filters, and how timing and state management matter in client-side attacks.
 
-## Key Learnings
+The ASIS CTF team knows how to create challenges that simulate real-world complexity without being frustrating. Each challenge had that moment where everything clicked, and I understood not just how to exploit it, but why the vulnerability existed in the first place.
 
-The ASIS CTF challenges provided excellent learning opportunities in:
-
-1. **Multi-layered exploitation** - Chaining multiple vulnerabilities to achieve the goal
-2. **Filter bypass techniques** - Creative ways to evade input validation
-3. **Client-side security** - Understanding browser security models and their limitations
-4. **Microservice security** - Securing inter-service communication and boundaries
+| Challenge | Difficulty | Main Technique |
+|-----------|------------|----------------|
+| Rick Gallery | Easy-Medium | Case-sensitive filter bypass |
+| ASIS Mail | Medium | Vulnerability chaining (SSRF + Path Traversal + IDOR) |
+| Sanchess | Medium-Hard | Python sandbox escape, Unicode normalization |
+| Bookmarks | Hard | CRLF injection, CSP bypass, timing attack |
 
 ---
 
-*All flags have been redacted where appropriate. These writeups are for educational purposes only.*
+*These writeups document my learning process and are shared for educational purposes.*

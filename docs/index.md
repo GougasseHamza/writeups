@@ -19,16 +19,19 @@ I recently tackled four web exploitation challenges from ASIS CTF. Each one taug
 -   **Rick Gallery**
 
     ---
+
     [Writeup](asis-ctf/rick-gallery.md)
 
 -   **ASIS Mail**
 
     ---
+
     [Writeup](asis-ctf/asis-mail.md)
 
 -   **Bookmarks**
 
     ---
+    
     [Writeup](asis-ctf/bookmarks.md)
 
 </div>
